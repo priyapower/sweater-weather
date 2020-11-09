@@ -7,9 +7,9 @@ class Hourly
               :icon
 
   def initialize(attributes)
-    @time = Time.at(attributes[:dt])
-    @temp = attributes[:temp]
-    @wind_speed = attributes[:wind_speed]
+    @time = Time.at(attributes[:dt]).strftime("%H:%M:%S")
+    @temp = "#{attributes[:temp]}" + " F"
+    @wind_speed = "#{attributes[:wind_speed]}" + " mph"
     @wind_direction = convert_degrees_to_direction(attributes[:wind_deg])
     @conditions = attributes[:weather][0][:description]
     @icon = attributes[:weather][0][:icon]

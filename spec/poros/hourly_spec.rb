@@ -1574,9 +1574,9 @@ RSpec.describe Forecast do
     end
     expect(hourly).to be_an(Array)
     expect(hourly.first).to be_a(Hourly)
-    expect(hourly.first.time).to be_a(Time)
-    expect(hourly.first.temp).to be_a(Float)
-    expect(hourly.first.wind_speed).to be_a(Float)
+    expect(hourly.first.time).to be_a(String)
+    expect(hourly.first.temp).to be_a(String)
+    expect(hourly.first.wind_speed).to be_a(String)
     expect(hourly.first.wind_direction).to be_a(String)
     expect(hourly.first.conditions).to be_a(String)
     expect(hourly.first.icon).to be_a(String)

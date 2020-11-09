@@ -1574,11 +1574,11 @@ RSpec.describe Daily do
     end
     expect(daily).to be_an(Array)
     expect(daily.first).to be_a(Daily)
-    expect(daily.first.date).to be_a(Time)
+    expect(daily.first.date).to be_a(String)
     expect(daily.first.sunrise).to be_a(Time)
     expect(daily.first.sunset).to be_a(Time)
-    expect(daily.first.max_temp).to be_a(Float)
-    expect(daily.first.min_temp).to be_a(Float)
+    expect(daily.first.max_temp).to be_a(String)
+    expect(daily.first.min_temp).to be_a(String)
     expect(daily.first.conditions).to be_a(String)
     expect(daily.first.icon).to be_a(String)
   end
