@@ -9,27 +9,37 @@ RSpec.describe "Trails API", :vcr do
 
       get "/api/v1/trails", params: query_params
       expect(response).to be_successful
-      trails = JSON.parse(response.body, symbolize_names: true)[:data]
-      binding.pry
-      expect(trails).to be_a(Hash)
-      expect(trails.start_weather).to be_a(StartWeather)
-      expect(trails.start_weather).to have_key(:start_temp)
-      expect(trails.start_weather[:start_temp]).to be_a(Float)
-      expect(trails.start_weather).to have_key(:start_conditions)
-      expect(trails.start_weather[:start_conditions]).to be_a(Float)
-      
-      expect(trails.nearby_trails).to be_a(Array)
-      expect(trails.nearby_trails.first).to be_a(Trail)
-      expect(trails.nearby_trails.first).to have_key(:name)
-      expect(trails.nearby_trails.first[:name]).to be_a(String)
-      expect(trails.nearby_trails.first).to have_key(:summary)
-      expect(trails.nearby_trails.first[:summary]).to be_a(String)
-      expect(trails.nearby_trails.first).to have_key(:difficulty)
-      expect(trails.nearby_trails.first[:difficulty]).to be_a(String)
-      expect(trails.nearby_trails.first).to have_key(:location)
-      expect(trails.nearby_trails.first[:location]).to be_a(String)
-      expect(trails.nearby_trails.first).to have_key(:distance)
-      expect(trails.nearby_trails.first[:distance]).to be_a(String)
+      trail = JSON.parse(response.body, symbolize_names: true)
+      expect(trail).to be_a(Hash)
+      expect(trail[:data]).to be_a(Hash)
+      expect(trail[:data][:id]).to be_nil
+      expect(trail[:data][:type]).to eq('trail')
+
+      trail_info = trail[:data][:attributes]
+      expect(trail_info).to be_a(Hash)
+      expect(trail_info).to have_key(:forecast)
+      expect(trail_info[:forecast]).to be_a(Hash)
+      expect(trail_info[:forecast]).to have_key(:temperature)
+      expect(trail_info[:forecast][:temperature]).to be_a(String)
+      expect(trail_info[:forecast]).to have_key(:summary)
+      expect(trail_info[:forecast][:summary]).to be_a(String)
+      expect(trail_info).to have_key(:location)
+      expect(trail_info[:location]).to be_a(String)
+      expect(trail_info).to have_key(:trails)
+
+      trails = trail[:data][:attributes][:trails]
+      expect(trails).to be_a(Array)
+      expect(trails.first).to be_a(Hash)
+      expect(trails.first).to have_key(:name)
+      expect(trails.first[:name]).to be_a(String)
+      expect(trails.first).to have_key(:summary)
+      expect(trails.first[:summary]).to be_a(String)
+      expect(trails.first).to have_key(:difficulty)
+      expect(trails.first[:difficulty]).to be_a(String)
+      expect(trails.first).to have_key(:location)
+      expect(trails.first[:location]).to be_a(String)
+      expect(trails.first).to have_key(:distance_to_trail)
+      expect(trails.first[:distance_to_trail]).to be_a(Float)
     end
   end
 end
