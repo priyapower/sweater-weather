@@ -10,4 +10,9 @@ class ForecastFacade
     end
     Forecast.new(current, daily, hourly)
   end
+
+  def self.forecast_for_hike(map)
+    json = ForecastService.forecast_by_coords(map)
+    HikingForecast.new(json[:current])
+  end
 end
