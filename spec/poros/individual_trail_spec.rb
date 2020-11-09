@@ -1,7 +1,7 @@
 require "rails_helper"
 
 RSpec.describe IndividualTrail do
-  it "creates a map poro", :vcr do
+  it "creates an indidual trial poro", :vcr do
     map_json =  {:info=>
       {:statuscode=>0,
         :copyright=>
