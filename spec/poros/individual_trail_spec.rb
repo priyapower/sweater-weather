@@ -89,12 +89,12 @@ RSpec.describe IndividualTrail do
       :conditionDetails=>nil,
       :conditionDate=>"1970-01-01 00:00:00"}
     map = Map.new(map_json)
-    trail = IndividualTrail.new(trail_json, map)
-    expect(trail).to be_a(IndividualTrail)
-    expect(trail.name).to be_a(String)
-    expect(trail.summary).to be_a(String)
-    expect(trail.difficulty).to be_a(String)
-    expect(trail.location).to be_a(String)
-    expect(trail.distance_to_trail).to be_a(Float)
+    ind_trail = IndividualTrail.new(trail_json, map)
+    expect(ind_trail).to be_a(IndividualTrail)
+    expect(ind_trail.name).to be_a(String)
+    expect(ind_trail.summary).to be_a(String)
+    expect(ind_trail.difficulty).to be_a(String)
+    expect(ind_trail.location).to be_a(String)
+    expect(ind_trail.distance_to_trail).to be_a(Float)
   end
 end
