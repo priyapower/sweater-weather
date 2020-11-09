@@ -4,7 +4,6 @@ class Api::V1::ForecastController < ApplicationController
     map = MapFacade.get_coords_by_loc(location)
     forecast = ForecastFacade.forecast_by_coords(map)
     render json: ForecastSerializer.new(forecast)
-    binding.pry
   end
 
   private
