@@ -1,7 +1,7 @@
 require "rails_helper"
 
-RSpec.describe Forecast do
-  it "creates a forecast poro" do
+RSpec.describe Hourly do
+  it "creates a hourly poro" do
     json = {
       "lat": 39.74,
       "lon": -104.98,
