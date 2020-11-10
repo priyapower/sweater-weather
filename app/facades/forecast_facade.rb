@@ -31,9 +31,4 @@ class ForecastFacade
       Hourly.new(json_hourly)
     end
   end
-
-  def self.forecast_for_hike(map)
-    json = ForecastService.forecast_by_coords(map)
-    HikingForecast.new(json[:current])
-  end
 end

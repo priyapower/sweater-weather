@@ -34,20 +34,4 @@ RSpec.describe MapService, :vcr do
     expect(json[:info][:messages]).to be_an(Array)
     expect(json[:info][:messages]).to eq(["Illegal argument from request: Insufficient info for location"])
   end
-
-  xit "calls external api MapQuest for distance" do
-    start_longitude = -104.984853
-    start_latitude = 39.738453
-    trail_longitude = -104.9567
-    trail_latitude = 39.7495
-    json = MapService.distance_to_trails(start_longitude, start_latitude, trail_longitude, trail_latitude)
-    expect(json).to be_a(Hash)
-    expect(json).to have_key(:route)
-    expect(json[:route]).to be_a(Hash)
-    expect(json[:route]).to have_key(:distance)
-    expect(json[:route][:distance]).to be_a(Float)
-  end
-
-  xit "calls external api Mapquest for distance for road trip" do
-  end
 end
