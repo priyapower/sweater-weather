@@ -40,6 +40,7 @@ RSpec.describe "User API", :vcr do
       expect(login_response[:data][:attributes]).to have_key(:api_key)
       expect(login_response[:data][:attributes][:api_key]).to be_a(String)
 
+      expect(login_response[:data][:attributes][:email]).to eq("whatever@example.com")
 
       logged_in_user = User.find(login_response[:data][:id].to_i)
       expect(logged_in_user).to be_a(User)
@@ -47,12 +48,50 @@ RSpec.describe "User API", :vcr do
       expect(logged_in_user.email).to be_a(String)
       expect(logged_in_user.api_key).to_not be_empty
       expect(logged_in_user.api_key).to be_a(String)
+      expect(logged_in_user.api_key).to eq(login_response[:data][:attributes][:api_key])
+
     end
 
-    xscenario "a registered user can see errors during login if errors thrown" do
-      # SAD PATH WITH CUSTOM 400 BODY RESPONSE!!!!
-      # - An unsuccessful request returns an appropriate 400-level status code and body with a description of why the request wasn’t successful.
-      # - Potential reasons a request would fail: passwords don’t match, email has already been taken, missing a field, etc.
+    scenario "a registered user can see errors during login if email is not in system" do
+      User.destroy_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('users')
+      User.create!("email": 'whatever@example.com',
+      "password": 'password')
+
+      login_params = {
+          "email": 'nopenopenope@example.com',
+          "password": 'password',
+        }
+
+      headers = {
+        'CONTENT_TYPE': 'application/json',
+        'ACCEPT': 'application/json'
+      }
+      post "/api/v1/sessions", headers: headers, params: JSON.generate(login_params)
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(response.body).to eq("Email or Password is incorrect. Please try again")
+    end
+
+    xscenario "a registered user can see errors during login if email if password doesn't authenticate" do
+      User.destroy_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('users')
+      User.create!("email": 'whatever@example.com',
+      "password": 'password')
+
+      login_params = {
+          "email": 'whatever@example.com',
+          "password": 'nopenopenope',
+        }
+
+      headers = {
+        'CONTENT_TYPE': 'application/json',
+        'ACCEPT': 'application/json'
+      }
+      post "/api/v1/sessions", headers: headers, params: JSON.generate(login_params)
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(response.body).to eq("Email or Password is incorrect. Please try again")
     end
   end
 end
