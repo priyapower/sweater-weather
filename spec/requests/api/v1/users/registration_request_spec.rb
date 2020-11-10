@@ -37,21 +37,16 @@ RSpec.describe "User API", :vcr do
       expect(created_user).to be_a(User)
       expect(created_user.email).to eq(create_params[:email])
       expect(created_user.api_key).to be_a(String)
-      # {
-      #   "data": {
-      #     "type": "users",
-      #     "id": "1",
-      #     "attributes": {
-      #       "email": "whatever@example.com",
-      #       "api_key": "jgn983hy48thw9begh98h4539h4"
-      #     }
-      #   }
-      # }
 
+      STILL NEED TO TEST IN POSTMAN
       # - This POST endpoint should NOT call your endpoint like /api/v1/users?email=person@woohoo.com&password=abc123&password_confirmation=abc123, and should NOT send as form data either. You must send a JSON payload in the body of the request
       #     - in Postman, under the address bar, click on “Body”, select “raw”, which will show a dropdown that probably says “Text” in it, choose “JSON” from the list
       #     - this is a hard requirement to pass this endpoint!
+
+      DOES IT COME THROUGH AS A 201 STATUS CODE?
       # - A successful request creates a user in your database, and generates a unique api key associated with that user, with a 201 status code. The response should NOT include the password in any form
+
+      SAD PATH WITH CUSTOM 400 BODY RESPONSE!!!!
       # - An unsuccessful request returns an appropriate 400-level status code and body with a description of why the request wasn’t successful.
       # - Potential reasons a request would fail: passwords don’t match, email has already been taken, missing a field, etc.
     end
