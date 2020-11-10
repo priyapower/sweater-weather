@@ -1,19 +1,18 @@
 class Api::V1::UsersController < ApplicationController
-  # skip_before_action :verify_authenticity_token
-
   def create
     ActiveRecord::Base.connection.reset_pk_sequence!('users')
     new_user = User.new(user_params)
     if new_user.save
-      render json: UsersSerializer.new(new_user)
+      render json: UsersSerializer.new(new_user), status: 201
     else
       render body: nil, status: 404
+      # render json: user.error_message(user_params), status: 401 # Needs a method in application controller/user model for error meesages
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:email, :password, :api_key)
+    params.permit(:email, :password, :password_confirmation, :api_key)
   end
 end
