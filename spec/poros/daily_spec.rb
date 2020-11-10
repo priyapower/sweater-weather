@@ -17,7 +17,7 @@ RSpec.describe Daily, :vcr do
     expect(daily.first.min_temp).to be_a(Float)
     expect(daily.first.conditions).to be_a(String)
     expect(daily.first.icon).to be_a(String)
-    expect(daily.first.max_temp).to eq(46.53)
+    expect(daily.first.max_temp).to eq(45.55)
     expect(daily.first.min_temp).to eq(33.13)
     expect(daily.first.conditions).to eq('clear sky')
     expect(daily.first.icon).to eq('01d')

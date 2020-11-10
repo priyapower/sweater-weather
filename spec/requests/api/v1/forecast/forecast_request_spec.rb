@@ -46,12 +46,12 @@ RSpec.describe "Forecast API", :vcr do
       expect(current_forecast).to_not have_key(:clouds)
       expect(current_forecast).to_not have_key(:pressure)
       # TESTING LIVE DATA FROM VCR RESPONSE
-      expect(current_forecast[:temp]).to eq(35.31)
-      expect(current_forecast[:feels_like]).to eq(26.31)
-      expect(current_forecast[:humidity]).to eq(66)
-      expect(current_forecast[:uvi]).to eq(2.5)
-      expect(current_forecast[:conditions]).to eq('mist')
-      expect(current_forecast[:icon]).to eq('50d')
+      expect(current_forecast[:temp]).to eq(45.55)
+      expect(current_forecast[:feels_like]).to eq(32.02)
+      expect(current_forecast[:humidity]).to eq(24)
+      expect(current_forecast[:uvi]).to eq(2.41)
+      expect(current_forecast[:conditions]).to eq('few clouds')
+      expect(current_forecast[:icon]).to eq('02d')
 
       daily_forecast = forecast[:data][:attributes][:daily_weather]
       expect(daily_forecast).to be_a(Array)
@@ -74,10 +74,10 @@ RSpec.describe "Forecast API", :vcr do
       expect(current_forecast).to_not have_key(:clouds)
       expect(current_forecast).to_not have_key(:pressure)
       # TESTING LIVE DATA FROM VCR RESPONSE
-      expect(daily_forecast.first[:max_temp]).to eq(45.77)
-      expect(daily_forecast.first[:min_temp]).to eq(31.23)
-      expect(daily_forecast.first[:conditions]).to eq('overcast clouds')
-      expect(daily_forecast.first[:icon]).to eq('04d')
+      expect(daily_forecast.first[:max_temp]).to eq(45.55)
+      expect(daily_forecast.first[:min_temp]).to eq(33.13)
+      expect(daily_forecast.first[:conditions]).to eq('clear sky')
+      expect(daily_forecast.first[:icon]).to eq('01d')
 
       hourly_forecast = forecast[:data][:attributes][:hourly_weather]
       expect(hourly_forecast).to be_a(Array)
@@ -98,11 +98,11 @@ RSpec.describe "Forecast API", :vcr do
       expect(current_forecast).to_not have_key(:clouds)
       expect(current_forecast).to_not have_key(:pressure)
       # TESTING LIVE DATA FROM VCR RESPONSE
-      expect(hourly_forecast.first[:temp]).to eq(35.31)
-      expect(hourly_forecast.first[:wind_speed]).to eq('7.67 mph')
-      expect(hourly_forecast.first[:wind_direction]).to eq('NNE')
-      expect(hourly_forecast.first[:conditions]).to eq('overcast clouds')
-      expect(hourly_forecast.first[:icon]).to eq('04d')
+      expect(hourly_forecast.first[:temp]).to eq(45.55)
+      expect(hourly_forecast.first[:wind_speed]).to eq('3.69 mph')
+      expect(hourly_forecast.first[:wind_direction]).to eq('NE')
+      expect(hourly_forecast.first[:conditions]).to eq('few clouds')
+      expect(hourly_forecast.first[:icon]).to eq('02d')
     end
 
     scenario "gets 404 error if query doesn't work" do

@@ -19,11 +19,11 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 10 Nov 2020 22:23:34 GMT
+      - Tue, 10 Nov 2020 22:24:34 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
-      - '1737'
+      - '1734'
       Access-Control-Allow-Methods:
       - OPTIONS,GET,POST
       Access-Control-Allow-Origin:
@@ -35,7 +35,7 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Tue, 10 Nov 2020 22:23:34 GMT
+      - Tue, 10 Nov 2020 22:24:34 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
@@ -43,7 +43,7 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       Set-Cookie:
-      - JSESSIONID=3F2F2E8A170B162024CF3239A2AA100C; Path=/; HttpOnly
+      - JSESSIONID=0A30B875C750B010DC42F070791BCFA5; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -54,9 +54,9 @@ http_interactions:
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2020 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,
         co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-1118873162"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=-1884096300"}]}]}'
-  recorded_at: Tue, 10 Nov 2020 22:23:34 GMT
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=-65683107"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=-509970231"}]}]}'
+  recorded_at: Tue, 10 Nov 2020 22:24:34 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/onecall?appid=4cd7d24cd5a2b1296d9032e5cfa6c18b&lat=39.738453&lon=-104.984853&units=imperial
@@ -78,7 +78,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Tue, 10 Nov 2020 22:23:35 GMT
+      - Tue, 10 Nov 2020 22:24:34 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -153,7 +153,7 @@ http_interactions:
         sky","icon":"01d"}],"clouds":0,"pop":0.04,"uvi":2.54},{"dt":1605549600,"sunrise":1605534385,"sunset":1605570208,"temp":{"day":46.35,"min":35.49,"max":53.11,"night":47.57,"eve":49.41,"morn":35.49},"feels_like":{"day":40.66,"night":40.78,"eve":43.72,"morn":29.41},"pressure":1023,"humidity":42,"dew_point":7.81,"wind_speed":2.04,"wind_deg":63,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"clouds":50,"pop":0,"uvi":2.49},{"dt":1605636000,"sunrise":1605620854,"sunset":1605656565,"temp":{"day":60.78,"min":45.63,"max":65.89,"night":51.87,"eve":57.92,"morn":45.63},"feels_like":{"day":55.63,"night":45.03,"eve":52.29,"morn":38.61},"pressure":1015,"humidity":25,"dew_point":8.24,"wind_speed":1.14,"wind_deg":194,"weather":[{"id":802,"main":"Clouds","description":"scattered
         clouds","icon":"03d"}],"clouds":31,"pop":0,"uvi":2.62}]}'
-  recorded_at: Tue, 10 Nov 2020 22:23:35 GMT
+  recorded_at: Tue, 10 Nov 2020 22:24:34 GMT
 - request:
     method: get
     uri: https://api.bing.microsoft.com/v7.0/images/search?color=colorOnly&count=1&imageType=photo&q=morning%20few%20clouds%20denver,%20co
@@ -187,17 +187,17 @@ http_interactions:
       P3p:
       - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
       Bingapis-Traceid:
-      - '0518DAAEA3864B718739E9448846AE6B'
+      - 93B54A19D85D4FBFA06F96C81E4204B9
       X-Msedge-Clientid:
-      - '0105328B7F34608538513DF57E3461F2'
+      - 2980005320866F962CFC0F2D212D6EF4
       X-Msapi-Userstate:
-      - 36c3
+      - f298
       X-Search-Responseinfo:
-      - InternalResponseTime=283,MSDatacenter=DUB02
+      - InternalResponseTime=159,MSDatacenter=DUB02
       X-Msedge-Ref:
-      - 'Ref A: 0518DAAEA3864B718739E9448846AE6B Ref B: DB3EDGE1615 Ref C: 2020-11-10T22:23:41Z'
+      - 'Ref A: 93B54A19D85D4FBFA06F96C81E4204B9 Ref B: DB3EDGE0812 Ref C: 2020-11-10T22:24:35Z'
       Apim-Request-Id:
-      - abe68455-cd91-4513-8ec5-89a37ccb804f
+      - 75241fc4-9000-4963-8f54-a154a0b27670
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -205,7 +205,7 @@ http_interactions:
       Csp-Billing-Usage:
       - CognitiveServices.BingSearchV7.Transaction=1
       Date:
-      - Tue, 10 Nov 2020 22:23:40 GMT
+      - Tue, 10 Nov 2020 22:24:35 GMT
     body:
       encoding: UTF-8
       string: '{"_type": "Images", "instrumentation": {"_type": "ResponseInstrumentation"},
@@ -405,5 +405,5 @@ http_interactions:
         "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Denver+Airport+Statue&FORM=IRPATC",
         "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Airport+Statue",
         "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Denver+Airport+Statue&pid=Api&mkt=en-GB&adlt=moderate&t=1"}}]}'
-  recorded_at: Tue, 10 Nov 2020 22:23:41 GMT
+  recorded_at: Tue, 10 Nov 2020 22:24:35 GMT
 recorded_with: VCR 6.0.0

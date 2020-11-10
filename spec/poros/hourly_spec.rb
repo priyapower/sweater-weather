@@ -16,9 +16,9 @@ RSpec.describe Hourly, :vcr do
     expect(hourly.first.wind_direction).to be_a(String)
     expect(hourly.first.conditions).to be_a(String)
     expect(hourly.first.icon).to be_a(String)
-    expect(hourly.first.temp).to eq(46.42)
-    expect(hourly.first.wind_speed).to eq('3.09 mph')
-    expect(hourly.first.wind_direction).to eq('NNE')
+    expect(hourly.first.temp).to eq(45.55)
+    expect(hourly.first.wind_speed).to eq('3.69 mph')
+    expect(hourly.first.wind_direction).to eq('NE')
     expect(hourly.first.conditions).to eq('few clouds')
     expect(hourly.first.icon).to eq('02d')
   end
