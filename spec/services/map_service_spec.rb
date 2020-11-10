@@ -31,4 +31,7 @@ RSpec.describe MapService do
     expect(json[:route]).to have_key(:distance)
     expect(json[:route][:distance]).to be_a(Float)
   end
+
+  xit "calls external api Mapquest for distance for road trip", :vcr do
+  end
 end
