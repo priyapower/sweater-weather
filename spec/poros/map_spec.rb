@@ -5,6 +5,7 @@ RSpec.describe Map, :vcr do
     location = 'denver, co'
     json = MapService.get_coords_by_loc(location)
     map = Map.new(json)
+    expect(map).to be_a(Map)
     expect(map.id).to be_nil
     expect(map.status_code).to be_a(Integer)
     expect(map.status_code).to eq(0)
