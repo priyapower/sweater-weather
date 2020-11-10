@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 To do:
-- Readme
+- Readme (We would like to see a README file included in your project that outlines the learning goals, how someone can clone and set up your application and where they can get their own API keys, and happy path endpoint use.)
 - Refactor for smaller controllers
 - Refactor for applicationcontroller(or similar) holding session data for calling a user (staying logged in, logged out concept)
 - Update all tests for only vcr calls
