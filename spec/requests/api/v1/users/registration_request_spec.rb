@@ -10,7 +10,7 @@ RSpec.describe "User API", :vcr do
         }
 
       headers = {"CONTENT_TYPE" => "application/json"}
-      post "/api/v1/users", headers: headers, params: JSON.generate(destination: create_params)
+      post "/api/v1/users", headers: headers, params: JSON.generate(user: create_params)
 
       # post '/api/v1/users', params: create_params
       expect(response).to be_successful
