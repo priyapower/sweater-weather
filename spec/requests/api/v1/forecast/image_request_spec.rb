@@ -63,7 +63,14 @@ RSpec.describe "Forecast API", :vcr do
       expect(extension_image[:data]).to have_key(:attributes)
     end
 
-    xscenario "sad path for incorrect location or invalid query" do
+    scenario "sad path for incorrect location or invalid query" do
+      query_params = {
+        location: ''
+        }
+      get "/api/v1/backgrounds", params: query_params
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+      expect(response.body).to eq("Illegal argument from request: Insufficient info for location")
     end
   end
 end
