@@ -73,7 +73,7 @@ RSpec.describe "User API", :vcr do
       expect(response.body).to eq("Email or Password is incorrect. Please try again")
     end
 
-    xscenario "a registered user can see errors during login if email if password doesn't authenticate" do
+    scenario "a registered user can see errors during login if email if password doesn't authenticate" do
       User.destroy_all
       ActiveRecord::Base.connection.reset_pk_sequence!('users')
       User.create!("email": 'whatever@example.com',
