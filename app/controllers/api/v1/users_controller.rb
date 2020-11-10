@@ -5,7 +5,7 @@ class Api::V1::UsersController < ApplicationController
     ActiveRecord::Base.connection.reset_pk_sequence!('users')
     new_user = User.new(user_params)
     if new_user.save
-      render json: UserSerializer.new(new_user)
+      render json: UsersSerializer.new(new_user)
     else
       render body: nil, status: 404
     end
