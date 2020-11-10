@@ -3,6 +3,11 @@ require "rails_helper"
 RSpec.describe "User API", :vcr do
   describe "user login" do
     scenario "a registered user can login to the system if credentials are correct" do
+      User.destroy_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('users')
+      User.create!("email": 'whatever@example.com',
+      "password": 'password')
+
       login_params = {
           "email": 'whatever@example.com',
           "password": 'password',
@@ -31,13 +36,16 @@ RSpec.describe "User API", :vcr do
       expect(login_response[:data][:attributes]).to be_a(Hash)
       expect(login_response[:data][:attributes]).to have_key(:email)
       expect(login_response[:data][:attributes][:email]).to be_a(String)
+      expect(login_response[:data][:attributes][:email]).to eq(login_params[:email])
       expect(login_response[:data][:attributes]).to have_key(:api_key)
       expect(login_response[:data][:attributes][:api_key]).to be_a(String)
 
 
       logged_in_user = User.find(login_response[:data][:id].to_i)
       expect(logged_in_user).to be_a(User)
-      expect(logged_in_user.email).to eq(create_params[:email])
+      expect(logged_in_user.email).to eq(login_params[:email])
+      expect(logged_in_user.email).to be_a(String)
+      expect(logged_in_user.api_key).to_not be_empty
       expect(logged_in_user.api_key).to be_a(String)
     end
 
