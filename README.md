@@ -36,6 +36,7 @@ To do:
   - priya_section2
   - priya_section3
   - priya_section4
+  - refactor_and_tdd
  - Image extension
  - Extension 1
  - Extension 2
