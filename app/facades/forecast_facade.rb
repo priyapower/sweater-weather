@@ -4,15 +4,31 @@ class ForecastFacade
     if map.status_code == 400
       map
     else
-      json = ForecastService.forecast_by_coords(map)
-      current = Current.new(json[:current])
-      daily = json[:daily][0..4].map do |json_daily|
-        Daily.new(json_daily)
-      end
-      hourly = json[:hourly][0..7].map do |json_hourly|
-        Hourly.new(json_hourly)
-      end
-      Forecast.new(current, daily, hourly)
+      get_weather_by_coords(map)
+    end
+  end
+
+  def self.get_weather_by_coords(map)
+    json = ForecastService.forecast_by_coords(map)
+    current = make_current_poro(json[:current])
+    daily = make_daily_poros(json[:daily][0..4])
+    hourly = make_hourly_poros(json[:hourly][0..7])
+    Forecast.new(current, daily, hourly)
+  end
+
+  def self.make_current_poro(data)
+    Current.new(data)
+  end
+
+  def self.make_daily_poros(data)
+    data.map do |json_daily|
+      Daily.new(json_daily)
+    end
+  end
+
+  def self.make_hourly_poros(data)
+    data.map do |json_hourly|
+      Hourly.new(json_hourly)
     end
   end
 
