@@ -9,7 +9,7 @@ RSpec.describe "Forecast API", :vcr do
       get "/api/v1/backgrounds", params: query_params
       expect(response).to be_successful
       expect(response.content_type).to eq("application/json")
-      image = JSON.parse(response.body, symbolize_names: true)[:data]
+      image = JSON.parse(response.body, symbolize_names: true)
       expect(image).to be_a(Hash)
       expect(image).to have_key(:data)
       expect(image[:data]).to be_a(Hash)
@@ -21,22 +21,18 @@ RSpec.describe "Forecast API", :vcr do
 
       attributes = image[:data][:attributes]
       expect(attributes).to be_a(Hash)
-      expect(attributes).to have_key(:image)
-      expect(attributes[:image]).to be_a(Hash)
-      expect(attributes[:image]).to have_key(:location)
-      expect(attributes[:image][:location]).to be_a(String)
-      expect(attributes[:image]).to have_key(:image_url)
-      expect(attributes[:image][:image_url]).to be_a(String)
-      expect(attributes[:image]).to have_key(:credit)
-      expect(attributes[:image][:credit]).to be_a(Hash)
-      expect(attributes[:image][:credit]).to have_key(:source)
-      expect(attributes[:image][:credit][:source]).to be_a(String)
-      expect(attributes[:image][:credit]).to have_key(:author)
-      expect(attributes[:image][:credit][:author]).to be_a(String)
-      expect(attributes[:image][:credit]).to have_key(:logo)
-      expect(attributes[:image][:credit][:logo]).to be_a(String)
-
-      # - Please read the terms of use of your image provider about giving credit for the search results, and put appropriate content in the response!!
+      expect(attributes).to have_key(:location)
+      expect(attributes[:location]).to be_a(String)
+      expect(attributes).to have_key(:image_url)
+      expect(attributes[:image_url]).to be_a(String)
+      expect(attributes).to have_key(:credit)
+      expect(attributes[:credit]).to be_a(Hash)
+      expect(attributes[:credit]).to have_key(:source)
+      expect(attributes[:credit][:source]).to be_a(String)
+      expect(attributes[:credit]).to have_key(:author)
+      expect(attributes[:credit][:author]).to be_a(String)
+      expect(attributes[:credit]).to have_key(:logo)
+      expect(attributes[:credit][:logo]).to be_a(String)
       # - EXTENSION: Determine the time of day and current weather and include that in your search; for example, searching for “denver evening snow” might return a far more interesting result
     end
   end
