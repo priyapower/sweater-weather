@@ -5,10 +5,6 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of :email }
     it { should validate_uniqueness_of :email }
     it { should validate_presence_of :password }
-    it { should validate_presence_of :api_key } #maybe, but since this is auto-generated in creation, does it go here?
+    it { should validate_confirmation_of :password }
   end
-  # describe "relationships" do
-    #it { should have_many :databse}
-    #it { should belong_to :databse}
-  # end
 end
