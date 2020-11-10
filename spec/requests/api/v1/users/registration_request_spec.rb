@@ -1,20 +1,23 @@
 require "rails_helper"
 
 RSpec.describe "User API", :vcr do
-  describe "can register" do
+  describe "user registration" do
     scenario "a new user can register in the system" do
       create_params = {
-          email: "whatever@example.com",
-          password: "password",
-          password_confirmation: "password"
+          "email": 'whatever@example.com',
+          "password": 'password',
+          "password_confirmation": 'password'
         }
 
-      headers = {"CONTENT_TYPE" => "application/json"}
-      post "/api/v1/users", headers: headers, params: JSON.generate(user: create_params)
+      headers = {
+        'CONTENT_TYPE': 'application/json',
+        'ACCEPT': 'application/json'
+      }
+      post "/api/v1/users", headers: headers, params: JSON.generate(create_params)
 
-      # post '/api/v1/users', params: create_params
       expect(response).to be_successful
       expect(response.content_type).to eq("application/json")
+      expect(response.status).to eq(201)
 
       user_response = JSON.parse(response.body, symbolize_names: true)
       expect(user_response).to be_a(Hash)
@@ -37,16 +40,10 @@ RSpec.describe "User API", :vcr do
       expect(created_user).to be_a(User)
       expect(created_user.email).to eq(create_params[:email])
       expect(created_user.api_key).to be_a(String)
+    end
 
-      STILL NEED TO TEST IN POSTMAN
-      # - This POST endpoint should NOT call your endpoint like /api/v1/users?email=person@woohoo.com&password=abc123&password_confirmation=abc123, and should NOT send as form data either. You must send a JSON payload in the body of the request
-      #     - in Postman, under the address bar, click on “Body”, select “raw”, which will show a dropdown that probably says “Text” in it, choose “JSON” from the list
-      #     - this is a hard requirement to pass this endpoint!
-
-      DOES IT COME THROUGH AS A 201 STATUS CODE?
-      # - A successful request creates a user in your database, and generates a unique api key associated with that user, with a 201 status code. The response should NOT include the password in any form
-
-      SAD PATH WITH CUSTOM 400 BODY RESPONSE!!!!
+    xscenario "a new user can see errors during registration if errors thrown" do
+      # SAD PATH WITH CUSTOM 400 BODY RESPONSE!!!!
       # - An unsuccessful request returns an appropriate 400-level status code and body with a description of why the request wasn’t successful.
       # - Potential reasons a request would fail: passwords don’t match, email has already been taken, missing a field, etc.
     end
