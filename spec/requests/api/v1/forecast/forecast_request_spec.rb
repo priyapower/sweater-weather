@@ -65,5 +65,8 @@ RSpec.describe "Forecast API", :vcr do
       expect(hourly_forecast.first).to have_key(:icon)
       expect(hourly_forecast.first[:icon]).to be_a(String)
     end
+
+    xscenario "sad path for incorrect location or invalid query" do
+    end
   end
 end
