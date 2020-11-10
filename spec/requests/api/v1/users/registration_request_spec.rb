@@ -41,6 +41,7 @@ RSpec.describe "User API", :vcr do
       expect(created_user).to be_a(User)
       expect(created_user.email).to eq(create_params[:email])
       expect(created_user.api_key).to be_a(String)
+      expect(created_user.api_key).to eq(user_response[:data][:attributes][:api_key])
     end
 
     scenario "a new user can see errors during registration if email is not valid" do
