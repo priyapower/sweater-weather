@@ -1,17 +1,8 @@
 class User < ApplicationRecord
-  before_create :set_api_key
-  # before_validation :set_api_key, on: :create
   has_secure_password
+  has_secure_token :api_key
 
-  validates :email, uniqueness: true, presence: true
+  validates :email, uniqueness: true, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, confirmation: true
   validates :api_key, uniqueness: true
-
-  def set_api_key
-    self.api_key = generate_api_key
-  end
-
-  def generate_api_key
-    SecureRandom.base58(24)
-  end
 end
