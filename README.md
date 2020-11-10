@@ -25,7 +25,17 @@ Things you may want to cover:
 
 To do:
 - Readme
+- Refactor for smaller controllers
+- Refactor for applicationcontroller(or similar) holding session data for calling a user (staying logged in, logged out concept)
+- Update all tests for only vcr calls
+- Update relevant tests for expectations on specific data from vcr fixtures
+- Finalize all sad paths (custom error method for 400s response)
 - Push branches
   - priya_section1a
   - priya_section1b
   - priya_section2
+  - priya_section3
+  - priya_section4
+ - Image extension
+ - Extension 1
+ - Extension 2
