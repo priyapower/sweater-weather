@@ -8,6 +8,7 @@ RSpec.describe "Forecast API", :vcr do
         }
       get "/api/v1/forecast", params: query_params
       expect(response).to be_successful
+      expect(response.status).to eq(200)
       expect(response.content_type).to eq("application/json")
       forecast = JSON.parse(response.body, symbolize_names: true)
       expect(forecast).to be_a(Hash)
@@ -104,7 +105,14 @@ RSpec.describe "Forecast API", :vcr do
       expect(hourly_forecast.first[:icon]).to eq('04d')
     end
 
-    xscenario "sad path for incorrect location or invalid query" do
+    scenario "gets 404 error if query doesn't work" do
+      query_params = {
+        location: ''
+        }
+      get "/api/v1/forecast", params: query_params
+      expect(response).to_not be_successful
+      expect(response.status).to eq(404)
+      expect(response.body).to eq("Illegal argument from request: Insufficient info for location")
     end
   end
 end
