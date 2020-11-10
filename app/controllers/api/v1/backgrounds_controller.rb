@@ -4,7 +4,7 @@ class Api::V1::BackgroundsController < ApplicationController
     # BASIC
     # - makes call to image api that passes location as query
     background_image = BackgroundImageFacade.get_image_by_location(location)
-    render json: BackgroundImageSerializer.new(background_image)
+    render json: ImageSerializer.new(background_image)
     # EXTENSION
     # - first gets current weather and time at location
     # - weather only wants summary/description
