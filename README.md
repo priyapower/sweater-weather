@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+To do:
+- Readme
+- Push branches
+  - priya_section1a
+  - priya_section1b
+  - priya_section2
