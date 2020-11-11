@@ -1,24 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### outlines the learning goals
 
-Things you may want to cover:
+### how someone can clone and set up your application and where they can get their own API keys
 
-* Ruby version
+### happy path endpoint use.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To do:
+- Readme
+- Push branches
+  - priya_section1a
+  - priya_section1b
+  - priya_section2
+  - priya_section3
+  - priya_section4
+  - refactor_and_tdd
+  
+ - Extension 1: imperial versus metric units
+ - Extension 2: (completed has secure token), implement rubocop
