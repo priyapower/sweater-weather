@@ -15,4 +15,16 @@ RSpec.describe MapFacade, :vcr do
     expect(map.latitude).to be_a(Float)
     expect(map.latitude).to eq(39.738453)
   end
+
+  it "can confirm time is rounded" do
+    time = Time.now.beginning_of_hour
+
+    round_down = time + 120
+    # This puts it at 2 minutes past the hour
+    expect(MapFacade.round_time(round_down)).to eq(time)
+
+    round_up = time + 1920
+    # This puts it at 32 minutes past the hour
+    expect(MapFacade.round_time(round_up)).to eq(time + 3600)
+  end
 end

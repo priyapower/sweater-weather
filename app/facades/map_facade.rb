@@ -42,7 +42,7 @@ class MapFacade
     if weather_time.min < 30
       weather_time = weather_time.beginning_of_hour
     else
-      weather_time = (weather_time + 1).beginning_of_hour
+      weather_time = (weather_time + 3600).beginning_of_hour
     end
     weather_time
   end
