@@ -13,13 +13,13 @@ class BackgroundImageFacade
   end
 
   def self.time_in_human_speak(data)
-    if data.hour >= 6 || data.hour < 11
+    if data.hour.between?(5, 10)
       'morning'
-    elsif data.hour >= 11 || data.hour < 18
+    elsif data.hour.between?(11, 17)
       'afternoon'
-    elsif data.hour >= 18 || data.hour < 23
+    elsif data.hour.between?(18, 21)
       'evening'
-    else data.hour >=23 || data.hour < 6
+    else data.hour.between?(0, 4) || data.hour.between?(22, 23)
       'night'
     end
   end

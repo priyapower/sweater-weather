@@ -28,4 +28,28 @@ RSpec.describe BackgroundImageFacade, :vcr do
     expect(unsuccessful.status_code).to be_an(Integer)
     expect(unsuccessful.status_code).to eq(400)
   end
+
+  it "can determine if time is in human speak" do
+    time = Time.now.beginning_of_day
+    5.times do
+      expect(BackgroundImageFacade.time_in_human_speak(time)).to eq('night')
+      time += 3600
+    end
+    6.times do
+      expect(BackgroundImageFacade.time_in_human_speak(time)).to eq('morning')
+      time += 3600
+    end
+    7.times do
+      expect(BackgroundImageFacade.time_in_human_speak(time)).to eq('afternoon')
+      time += 3600
+    end
+    4.times do
+      expect(BackgroundImageFacade.time_in_human_speak(time)).to eq('evening')
+      time += 3600
+    end
+    2.times do
+      expect(BackgroundImageFacade.time_in_human_speak(time)).to eq('night')
+      time += 3600
+    end
+  end
 end
