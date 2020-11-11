@@ -17,8 +17,8 @@ RSpec.describe RoadTripFacade do
     expect(trip.travel_time).to eq("01:43:57")
     expect(trip.weather_at_eta).to be_a(Hash)
     expect(trip.weather_at_eta[:temperature]).to be_a(Float)
-    expect(trip.weather_at_eta[:temperature]).to eq(39.43) # GET FROM VCR FIXTURE
+    expect(trip.weather_at_eta[:temperature]).to eq(39.43)
     expect(trip.weather_at_eta[:conditions]).to be_a(String)
-    expect(trip.weather_at_eta[:conditions]).to eq("scattered clouds") # GET FROM VCR FIXTURE
+    expect(trip.weather_at_eta[:conditions]).to eq("scattered clouds")
   end
 end
