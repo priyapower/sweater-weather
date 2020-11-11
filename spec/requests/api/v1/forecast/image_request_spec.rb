@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Forecast API", :vcr do
   describe "can get image by forecast" do
-    scenario "can get image from Flickr API with source credit as an index action" do
+    scenario "can get image from Bing API with source credit as an index action" do
       query_params = {
         location: 'denver, co'
         }

@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 11 Nov 2020 02:02:02 GMT
+      - Wed, 11 Nov 2020 02:01:59 GMT
       Content-Type:
       - application/json;charset=UTF-8
       Content-Length:
@@ -35,7 +35,7 @@ http_interactions:
       Geocodetransactioncount:
       - '1'
       Last-Modified:
-      - Wed, 11 Nov 2020 02:02:02 GMT
+      - Wed, 11 Nov 2020 02:01:59 GMT
       Pragma:
       - no-cache
       Reversegeocodetransactioncount:
@@ -43,7 +43,7 @@ http_interactions:
       Server:
       - Apache-Coyote/1.1
       Set-Cookie:
-      - JSESSIONID=F7D1D40FE7FBAE385F59F6F7653AC849; Path=/; HttpOnly
+      - JSESSIONID=EC62A394B78C036A82E3039445D0E1BB; Path=/; HttpOnly
       Status:
       - success
       Transactionweight:
@@ -54,9 +54,9 @@ http_interactions:
         Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
         2020 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,
         co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1753833018"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
-        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=1287733786"}]}]}'
-  recorded_at: Wed, 11 Nov 2020 02:02:02 GMT
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1825691990"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=1518175715"}]}]}'
+  recorded_at: Wed, 11 Nov 2020 02:01:59 GMT
 - request:
     method: get
     uri: https://api.openweathermap.org/data/2.5/onecall?appid=4cd7d24cd5a2b1296d9032e5cfa6c18b&lat=39.738453&lon=-104.984853&units=imperial
@@ -78,7 +78,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Wed, 11 Nov 2020 02:02:03 GMT
+      - Wed, 11 Nov 2020 02:02:00 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -95,8 +95,8 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"lat":39.74,"lon":-104.98,"timezone":"America/Denver","timezone_offset":-25200,"current":{"dt":1605060123,"sunrise":1605015570,"sunset":1605052105,"temp":36.41,"feels_like":26.19,"pressure":1011,"humidity":64,"dew_point":26.17,"uvi":2.47,"clouds":75,"visibility":10000,"wind_speed":10.29,"wind_deg":30,"weather":[{"id":803,"main":"Clouds","description":"broken
-        clouds","icon":"04n"}]},"minutely":[{"dt":1605060180,"precipitation":0},{"dt":1605060240,"precipitation":0},{"dt":1605060300,"precipitation":0},{"dt":1605060360,"precipitation":0},{"dt":1605060420,"precipitation":0},{"dt":1605060480,"precipitation":0},{"dt":1605060540,"precipitation":0},{"dt":1605060600,"precipitation":0},{"dt":1605060660,"precipitation":0},{"dt":1605060720,"precipitation":0},{"dt":1605060780,"precipitation":0},{"dt":1605060840,"precipitation":0},{"dt":1605060900,"precipitation":0},{"dt":1605060960,"precipitation":0},{"dt":1605061020,"precipitation":0},{"dt":1605061080,"precipitation":0},{"dt":1605061140,"precipitation":0},{"dt":1605061200,"precipitation":0},{"dt":1605061260,"precipitation":0},{"dt":1605061320,"precipitation":0},{"dt":1605061380,"precipitation":0},{"dt":1605061440,"precipitation":0},{"dt":1605061500,"precipitation":0},{"dt":1605061560,"precipitation":0},{"dt":1605061620,"precipitation":0},{"dt":1605061680,"precipitation":0},{"dt":1605061740,"precipitation":0},{"dt":1605061800,"precipitation":0},{"dt":1605061860,"precipitation":0},{"dt":1605061920,"precipitation":0},{"dt":1605061980,"precipitation":0},{"dt":1605062040,"precipitation":0},{"dt":1605062100,"precipitation":0},{"dt":1605062160,"precipitation":0},{"dt":1605062220,"precipitation":0},{"dt":1605062280,"precipitation":0},{"dt":1605062340,"precipitation":0},{"dt":1605062400,"precipitation":0},{"dt":1605062460,"precipitation":0},{"dt":1605062520,"precipitation":0},{"dt":1605062580,"precipitation":0},{"dt":1605062640,"precipitation":0},{"dt":1605062700,"precipitation":0},{"dt":1605062760,"precipitation":0},{"dt":1605062820,"precipitation":0},{"dt":1605062880,"precipitation":0},{"dt":1605062940,"precipitation":0},{"dt":1605063000,"precipitation":0},{"dt":1605063060,"precipitation":0},{"dt":1605063120,"precipitation":0},{"dt":1605063180,"precipitation":0},{"dt":1605063240,"precipitation":0},{"dt":1605063300,"precipitation":0},{"dt":1605063360,"precipitation":0},{"dt":1605063420,"precipitation":0},{"dt":1605063480,"precipitation":0},{"dt":1605063540,"precipitation":0},{"dt":1605063600,"precipitation":0},{"dt":1605063660,"precipitation":0},{"dt":1605063720,"precipitation":0},{"dt":1605063780,"precipitation":0}],"hourly":[{"dt":1605060000,"temp":36.41,"feels_like":31.19,"pressure":1011,"humidity":64,"dew_point":26.17,"clouds":75,"visibility":10000,"wind_speed":1.39,"wind_deg":289,"weather":[{"id":803,"main":"Clouds","description":"broken
+      string: '{"lat":39.74,"lon":-104.98,"timezone":"America/Denver","timezone_offset":-25200,"current":{"dt":1605060120,"sunrise":1605015570,"sunset":1605052105,"temp":36.41,"feels_like":26.19,"pressure":1011,"humidity":64,"dew_point":26.17,"uvi":2.47,"clouds":75,"visibility":10000,"wind_speed":10.29,"wind_deg":30,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},"minutely":[{"dt":1605060120,"precipitation":0},{"dt":1605060180,"precipitation":0},{"dt":1605060240,"precipitation":0},{"dt":1605060300,"precipitation":0},{"dt":1605060360,"precipitation":0},{"dt":1605060420,"precipitation":0},{"dt":1605060480,"precipitation":0},{"dt":1605060540,"precipitation":0},{"dt":1605060600,"precipitation":0},{"dt":1605060660,"precipitation":0},{"dt":1605060720,"precipitation":0},{"dt":1605060780,"precipitation":0},{"dt":1605060840,"precipitation":0},{"dt":1605060900,"precipitation":0},{"dt":1605060960,"precipitation":0},{"dt":1605061020,"precipitation":0},{"dt":1605061080,"precipitation":0},{"dt":1605061140,"precipitation":0},{"dt":1605061200,"precipitation":0},{"dt":1605061260,"precipitation":0},{"dt":1605061320,"precipitation":0},{"dt":1605061380,"precipitation":0},{"dt":1605061440,"precipitation":0},{"dt":1605061500,"precipitation":0},{"dt":1605061560,"precipitation":0},{"dt":1605061620,"precipitation":0},{"dt":1605061680,"precipitation":0},{"dt":1605061740,"precipitation":0},{"dt":1605061800,"precipitation":0},{"dt":1605061860,"precipitation":0},{"dt":1605061920,"precipitation":0},{"dt":1605061980,"precipitation":0},{"dt":1605062040,"precipitation":0},{"dt":1605062100,"precipitation":0},{"dt":1605062160,"precipitation":0},{"dt":1605062220,"precipitation":0},{"dt":1605062280,"precipitation":0},{"dt":1605062340,"precipitation":0},{"dt":1605062400,"precipitation":0},{"dt":1605062460,"precipitation":0},{"dt":1605062520,"precipitation":0},{"dt":1605062580,"precipitation":0},{"dt":1605062640,"precipitation":0},{"dt":1605062700,"precipitation":0},{"dt":1605062760,"precipitation":0},{"dt":1605062820,"precipitation":0},{"dt":1605062880,"precipitation":0},{"dt":1605062940,"precipitation":0},{"dt":1605063000,"precipitation":0},{"dt":1605063060,"precipitation":0},{"dt":1605063120,"precipitation":0},{"dt":1605063180,"precipitation":0},{"dt":1605063240,"precipitation":0},{"dt":1605063300,"precipitation":0},{"dt":1605063360,"precipitation":0},{"dt":1605063420,"precipitation":0},{"dt":1605063480,"precipitation":0},{"dt":1605063540,"precipitation":0},{"dt":1605063600,"precipitation":0},{"dt":1605063660,"precipitation":0},{"dt":1605063720,"precipitation":0}],"hourly":[{"dt":1605060000,"temp":36.41,"feels_like":31.19,"pressure":1011,"humidity":64,"dew_point":26.17,"clouds":75,"visibility":10000,"wind_speed":1.39,"wind_deg":289,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04n"}],"pop":0},{"dt":1605063600,"temp":38.98,"feels_like":31.24,"pressure":1014,"humidity":58,"dew_point":26.24,"clouds":87,"visibility":10000,"wind_speed":5.88,"wind_deg":254,"weather":[{"id":804,"main":"Clouds","description":"overcast
         clouds","icon":"04n"}],"pop":0},{"dt":1605067200,"temp":39.65,"feels_like":32.65,"pressure":1016,"humidity":56,"dew_point":26.04,"clouds":89,"visibility":10000,"wind_speed":4.54,"wind_deg":230,"weather":[{"id":804,"main":"Clouds","description":"overcast
         clouds","icon":"04n"}],"pop":0},{"dt":1605070800,"temp":39.18,"feels_like":33.13,"pressure":1018,"humidity":58,"dew_point":26.4,"clouds":74,"visibility":10000,"wind_speed":2.93,"wind_deg":259,"weather":[{"id":803,"main":"Clouds","description":"broken
@@ -153,7 +153,7 @@ http_interactions:
         sky","icon":"01d"}],"clouds":1,"pop":0.07,"uvi":2.56},{"dt":1605549600,"sunrise":1605534385,"sunset":1605570208,"temp":{"day":45.9,"min":35.89,"max":52.92,"night":47.53,"eve":49.05,"morn":35.89},"feels_like":{"day":40.17,"night":39.49,"eve":43.66,"morn":31.12},"pressure":1027,"humidity":42,"dew_point":5.45,"wind_speed":2.04,"wind_deg":165,"weather":[{"id":800,"main":"Clear","description":"clear
         sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.58},{"dt":1605636000,"sunrise":1605620854,"sunset":1605656565,"temp":{"day":58.77,"min":45.66,"max":64.76,"night":51.4,"eve":58.89,"morn":45.66},"feels_like":{"day":53.51,"night":44.71,"eve":53.53,"morn":38.41},"pressure":1021,"humidity":28,"dew_point":10.36,"wind_speed":1.54,"wind_deg":124,"weather":[{"id":803,"main":"Clouds","description":"broken
         clouds","icon":"04d"}],"clouds":67,"pop":0,"uvi":2.55}]}'
-  recorded_at: Wed, 11 Nov 2020 02:02:03 GMT
+  recorded_at: Wed, 11 Nov 2020 02:02:00 GMT
 - request:
     method: get
     uri: https://api.bing.microsoft.com/v7.0/images/search?color=colorOnly&count=1&imageType=photo&q=evening%20broken%20clouds%20denver,%20co
@@ -187,17 +187,17 @@ http_interactions:
       P3p:
       - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
       Bingapis-Traceid:
-      - 7E64265ABA4A463F8BEC483D2577BED1
+      - DD01297E9E5747258A0CB7D5921201FF
       X-Msedge-Clientid:
-      - 3F318BFA09E9671F0BE18485084266B3
+      - 293473ADB9986182105C7CD2B833600F
       X-Msapi-Userstate:
-      - 83a9
+      - b91d
       X-Search-Responseinfo:
-      - InternalResponseTime=161,MSDatacenter=DUB02
+      - InternalResponseTime=215,MSDatacenter=DUB02
       X-Msedge-Ref:
-      - 'Ref A: 7E64265ABA4A463F8BEC483D2577BED1 Ref B: DB3EDGE0812 Ref C: 2020-11-11T02:02:03Z'
+      - 'Ref A: DD01297E9E5747258A0CB7D5921201FF Ref B: DB3EDGE0721 Ref C: 2020-11-11T02:02:01Z'
       Apim-Request-Id:
-      - 537c3cad-093b-4487-bc02-10ef82b69df1
+      - ef125a36-8f1f-457c-b173-13ea6a899cb8
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       X-Content-Type-Options:
@@ -205,7 +205,7 @@ http_interactions:
       Csp-Billing-Usage:
       - CognitiveServices.BingSearchV7.Transaction=1
       Date:
-      - Wed, 11 Nov 2020 02:02:03 GMT
+      - Wed, 11 Nov 2020 02:02:01 GMT
     body:
       encoding: UTF-8
       string: '{"_type": "Images", "instrumentation": {"_type": "ResponseInstrumentation"},
@@ -396,5 +396,5 @@ http_interactions:
         "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Denver+Airport+Statue&FORM=IRPATC",
         "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Airport+Statue",
         "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Denver+Airport+Statue&pid=Api&mkt=en-GB&adlt=moderate&t=1"}}]}'
-  recorded_at: Wed, 11 Nov 2020 02:02:04 GMT
+  recorded_at: Wed, 11 Nov 2020 02:02:02 GMT
 recorded_with: VCR 6.0.0
