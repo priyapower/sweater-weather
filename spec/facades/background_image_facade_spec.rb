@@ -10,12 +10,11 @@ RSpec.describe BackgroundImageFacade, :vcr do
     expect(background_image.image_url).to be_a(String)
     expect(background_image.credit).to be_a(Hash)
     expect(background_image.credit[:source]).to be_a(String)
-    expect(background_image.credit[:author]).to be_a(String)
-    expect(background_image.credit[:logo]).to be_a(String)
+    expect(background_image.credit[:author]).to be_a(String).or be_nil
+    expect(background_image.credit[:logo]).to be_a(String).or be_nil
 
     expect(background_image.location).to eq("denver, co")
-    expect(background_image.credit[:source]).to eq("https://www.reddit.com/r/pics/comments/2ivi8l/huge_cloud_over_denver_colorado/")
-    expect(background_image.credit[:author]).to eq("Reddit")
+    expect(background_image.credit[:source]).to eq("https://www.pinterest.com/pin/480477853973838871/")
   end
 
   it "returns errors path if unsuccessful" do

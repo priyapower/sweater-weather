@@ -31,15 +31,13 @@ RSpec.describe "Forecast API", :vcr do
       expect(attributes[:credit]).to have_key(:source)
       expect(attributes[:credit][:source]).to be_a(String)
       expect(attributes[:credit]).to have_key(:author)
-      expect(attributes[:credit][:author]).to be_a(String)
+      expect(attributes[:credit][:author]).to be_a(String).or be_nil
       expect(attributes[:credit]).to have_key(:logo)
-      expect(attributes[:credit][:logo]).to be_a(String)
+      expect(attributes[:credit][:logo]).to be_a(String).or be_nil
 
       expect(attributes[:location]).to eq('denver, co')
-      expect(attributes[:image_url]).to eq('https://media.istockphoto.com/photos/denver-colorado-in-the-early-morning-with-clouds-in-the-sky-picture-id930889410?k=6&m=930889410&s=170667a&w=0&h=Y2tZj6w9Nf5ZhABl0A8u2pBwnjgQEKEzuVcyRKxraSE=')
-      expect(attributes[:credit][:source]).to eq('https://www.istockphoto.com/photo/denver-colorado-in-the-early-morning-with-clouds-in-the-sky-gm930889410-255183871')
-      expect(attributes[:credit][:author]).to eq('iStock')
-      expect(attributes[:credit][:logo]).to eq('https://www.bing.com/th?id=ODF.hQ_7876msK32aIBs9d0umw&pid=Api')
+      expect(attributes[:image_url]).to eq("https://i.pinimg.com/originals/ef/1b/f6/ef1bf68b81f4dcc129dce5e105f82ccb.jpg")
+      expect(attributes[:credit][:source]).to eq("https://www.pinterest.com/pin/480477853973838871/")
     end
 
     scenario "extension for time of day and weather in search" do
