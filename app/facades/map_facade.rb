@@ -6,13 +6,17 @@ class MapFacade
 
   def self.get_trip_info(origin, destination)
     trip_details = get_trip_details_from_map(origin, destination)
-    formatted_time = get_destination_formatted_time(trip_details)
-    destination_final_time = get_final_time_at_destination(trip_details)
-    destination_weather = get_destination_coords_and_weather(destination)
-    weather_at_destination = get_weather_at_destination(destination_weather, destination_final_time)
-    temperature = weather_at_destination[0][:temp]
-    conditions = weather_at_destination[0][:weather][0][:description]
-    [origin, destination, formatted_time, temperature, conditions]
+    if trip_details[:info][:statuscode] == 0
+      formatted_time = get_destination_formatted_time(trip_details)
+      destination_final_time = get_final_time_at_destination(trip_details)
+      destination_weather = get_destination_coords_and_weather(destination)
+      weather_at_destination = get_weather_at_destination(destination_weather, destination_final_time)
+      temperature = weather_at_destination[0][:temp]
+      conditions = weather_at_destination[0][:weather][0][:description]
+      [origin, destination, formatted_time, temperature, conditions]
+    else
+      trip_details[:info][:messages][0]
+    end
   end
 
   def self.get_destination_coords_and_weather(destination)
