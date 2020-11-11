@@ -33,7 +33,13 @@ RSpec.describe "Forecast API", :vcr do
       expect(attributes[:credit][:author]).to be_a(String)
       expect(attributes[:credit]).to have_key(:logo)
       expect(attributes[:credit][:logo]).to be_a(String)
+    end
+
+    xscenario "extension for time of day and weather in search" do
       # - EXTENSION: Determine the time of day and current weather and include that in your search; for example, searching for “denver evening snow” might return a far more interesting result
+    end
+
+    xscenario "sad path for incorrect location or invalid query" do
     end
   end
 end
