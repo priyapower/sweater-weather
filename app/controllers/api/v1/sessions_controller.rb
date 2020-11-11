@@ -4,7 +4,7 @@ class Api::V1::SessionsController < ApplicationController
     if registered_user && registered_user.authenticate(sessions_params[:password])
       render json: UsersSerializer.new(registered_user), status: 200
     else
-      render body: 'Email or Password is incorrect. Please try again', status: 400
+      render body: 'ERROR: Email or Password is incorrect. Please try again', status: 400
     end
   end
 

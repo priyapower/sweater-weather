@@ -70,7 +70,7 @@ RSpec.describe "User API", :vcr do
       post "/api/v1/sessions", headers: headers, params: JSON.generate(login_params)
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
-      expect(response.body).to eq("Email or Password is incorrect. Please try again")
+      expect(response.body).to eq("ERROR: Email or Password is incorrect. Please try again")
     end
 
     scenario "a registered user can see errors during login if email if password doesn't authenticate" do
@@ -91,7 +91,7 @@ RSpec.describe "User API", :vcr do
       post "/api/v1/sessions", headers: headers, params: JSON.generate(login_params)
       expect(response).to_not be_successful
       expect(response.status).to eq(400)
-      expect(response.body).to eq("Email or Password is incorrect. Please try again")
+      expect(response.body).to eq("ERROR: Email or Password is incorrect. Please try again")
     end
   end
 end
