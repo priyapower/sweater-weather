@@ -15,7 +15,7 @@ class MapFacade
       conditions = weather_at_destination[0][:weather][0][:description]
       [origin, destination, formatted_time, temperature, conditions]
     else
-      trip_details[:info][:messages][0]
+      trip_details
     end
   end
 
