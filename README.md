@@ -112,25 +112,26 @@ In terminal, run ```rails s``` (if you need a different port, use ```rails s -p 
 
 In Postman, fill out the following in a new request (press the plus on the tabs for a new request).
 
-IMAGE OF GET REQUEST FOR BACKGROUNDS
+<img width="1379" alt="NoBody1" src="https://user-images.githubusercontent.com/49959312/98831050-4ddb2080-23f8-11eb-850d-8380db5307e9.png">
 
 Clicking Send should render a ```status:200``` and the following response.
 
-IMAGE OF RESPONSE
+<img width="1389" alt="NoBody2" src="https://user-images.githubusercontent.com/49959312/98831059-50d61100-23f8-11eb-83fb-831014f5ecc9.png">
 
 #### Example: User Registration (raw json body)
 In terminal, run ```rails s``` (if you need a different port, use ```rails s -p <port number>``` - remember to use your custom port in the requests instead).  
 
 In Postman, fill out the following in a new request (press the plus on the tabs for a new request).
 
-IMAGE OF POST REQUEST FOR USERS
+<img width="1378" alt="Body1" src="https://user-images.githubusercontent.com/49959312/98831065-529fd480-23f8-11eb-9114-c22163654756.png">
 
 You must also include a raw json body. Click on the ```Body``` tab (under your url field) and select ```raw```, then select ```JSON``` from drop down.
 
-IMAGE OF RAW JSON BODY
+<img width="1358" alt="Body2" src="https://user-images.githubusercontent.com/49959312/98831085-57fd1f00-23f8-11eb-8103-02e8328ec366.png">
 
-Clicking Send should render a ```status:200``` and the following response.
-IMAGE OF RESPONSE
+Clicking Send should render a ```status:200``` and the following response.  
+
+<img width="1372" alt="Body3" src="https://user-images.githubusercontent.com/49959312/98831094-59c6e280-23f8-11eb-9c92-b10ce6c00371.png">
 
 
 ### Contact Me
