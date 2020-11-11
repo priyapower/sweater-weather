@@ -49,7 +49,51 @@ RSpec.describe "Road Trip API", :vcr do
       expect(attributes[:weather_at_eta][:conditions]).to be_a(String)
     end
 
-    xscenario "sad path for incorrect origin, destination, or api_key" do
+    scenario "can see errors if api_key is not not authenticated" do
+      User.destroy_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('users')
+      User.create!("email": 'mickey@example.com', "password": 'password')
+      User.create!("email": 'minnie@example.com', "password": 'password')
+      User.create!("email": 'donald@example.com', "password": 'password')
+      User.create!("email": 'daisy@example.com', "password": 'password')
+
+      trip_params = {
+        "origin": "Denver,CO",
+        "destination": "Pueblo,CO",
+        "api_key": 'invalidkey'
+      }
+
+      headers = {
+        'CONTENT_TYPE': 'application/json',
+        'ACCEPT': 'application/json'
+      }
+
+      post "/api/v1/road_trip", headers: headers, params: JSON.generate(trip_params)
+      expect(response).to_not be_successful
+      expect(response.status).to eq(401)
+      expect(response.body).to eq("ERROR: Invalid Api Key")
+    end
+
+    scenario "can see errors for origin or destination queries failing" do
+      User.destroy_all
+      ActiveRecord::Base.connection.reset_pk_sequence!('users')
+      user = User.create!("email": 'mickey@example.com', "password": 'password')
+
+      trip_params = {
+        "origin": "Denver, Co",
+        "destination": "",
+        "api_key": user.api_key
+      }
+
+      headers = {
+        'CONTENT_TYPE': 'application/json',
+        'ACCEPT': 'application/json'
+      }
+
+      post "/api/v1/road_trip", headers: headers, params: JSON.generate(trip_params)
+      expect(response).to_not be_successful
+      expect(response.status).to eq(400)
+      expect(response.body).to eq("ERROR: At least two locations must be provided.")
     end
   end
 end
