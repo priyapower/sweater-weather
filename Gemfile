@@ -50,7 +50,6 @@ end
 group :test do
   gem 'capybara'
   gem 'launchy'
-  gem 'faker'
   gem 'simplecov'
   gem 'vcr'
   gem 'webmock'

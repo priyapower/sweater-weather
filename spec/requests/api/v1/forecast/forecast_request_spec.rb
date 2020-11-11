@@ -8,6 +8,7 @@ RSpec.describe "Forecast API", :vcr do
         }
       get "/api/v1/forecast", params: query_params
       expect(response).to be_successful
+      expect(response.content_type).to eq("application/json")
       forecast = JSON.parse(response.body, symbolize_names: true)[:data]
       current_forecast = forecast[:attributes][:current_weather]
       expect(current_forecast).to be_a(Hash)

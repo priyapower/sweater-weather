@@ -1,5 +1,6 @@
 class ForecastFacade
-  def self.forecast_by_coords(map)
+  def self.forecast_by_coords(location)
+    map = MapFacade.get_coords_by_loc(location)
     json = ForecastService.forecast_by_coords(map)
     current = Current.new(json[:current])
     daily = json[:daily][0..4].map do |json_daily|
