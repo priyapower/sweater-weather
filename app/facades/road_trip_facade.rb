@@ -1,6 +1,10 @@
 class RoadTripFacade
   def self.create_trip(origin, destination)
     poro_details = MapFacade.get_trip_info(origin, destination)
-    RoadTrip.new(poro_details)
+    if poro_details.class == Array
+      RoadTrip.new(poro_details)
+    else
+      poro_details
+    end
   end
 end
