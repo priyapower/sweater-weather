@@ -24,15 +24,3 @@ class BackgroundImageFacade
     end
   end
 end
-
-
-
-
-
-# t = Time.new
-# puts "Good %s" % [(t.to_i/43199).even? ? "morning" : "afternoon"]
-# Good morning
-#
-# t += 43199
-# puts "Good %s" % [(t.to_i/43199).even? ? "morning" : "afternoon"]
-# Good afternoon
