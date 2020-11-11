@@ -6,6 +6,14 @@ class ForecastService
     end
     JSON.parse(response.body, symbolize_names: true)
   end
+  # 
+  # def self.road_trip_weather(time, destination)
+  #   response = conn.get("/data/2.5/forecast") do |r|
+  #     r.params['q'] = destination
+  #     r.params['lon'] = map.longitude
+  #   end
+  #   JSON.parse(response.body, symbolize_names: true)
+  # end
 
   def self.conn
     Faraday.new "https://api.openweathermap.org" do |f|
