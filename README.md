@@ -133,21 +133,7 @@ Clicking Send should render a ```status:200``` and the following response.
 IMAGE OF RESPONSE
 
 
-
 ### Contact Me
 **Priya Power**
 - LinkedIn: [Priya Power](https://www.linkedin.com/feed/)
 - Github: [priyapower](https://github.com/priyapower)
-
-To do:
-- Extension 1: imperial versus metric units
-- Extension 2: (completed has secure token), implement rubocop
-- Push branches
-  - priya_section1a
-  - priya_section1b
-  - priya_section2
-  - priya_section3
-  - priya_section4
-  - refactor_and_tdd
-  - readme
-- ADD IMAGES TO README
