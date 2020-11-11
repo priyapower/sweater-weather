@@ -1,0 +1,400 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.mapquestapi.com/geocoding/v1/address?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&location=denver,%20co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 11 Nov 2020 02:02:02 GMT
+      Content-Type:
+      - application/json;charset=UTF-8
+      Content-Length:
+      - '1735'
+      Access-Control-Allow-Methods:
+      - OPTIONS,GET,POST
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache, must-revalidate
+      Expires:
+      - Mon, 20 Dec 1998 01:00:00 GMT
+      Geocodetransactioncount:
+      - '1'
+      Last-Modified:
+      - Wed, 11 Nov 2020 02:02:02 GMT
+      Pragma:
+      - no-cache
+      Reversegeocodetransactioncount:
+      - '0'
+      Server:
+      - Apache-Coyote/1.1
+      Set-Cookie:
+      - JSESSIONID=F7D1D40FE7FBAE385F59F6F7653AC849; Path=/; HttpOnly
+      Status:
+      - success
+      Transactionweight:
+      - '1.0'
+    body:
+      encoding: UTF-8
+      string: '{"info":{"statuscode":0,"copyright":{"text":"\u00A9 2020 MapQuest,
+        Inc.","imageUrl":"http://api.mqcdn.com/res/mqlogo.gif","imageAltText":"\u00A9
+        2020 MapQuest, Inc."},"messages":[]},"options":{"maxResults":-1,"thumbMaps":true,"ignoreLatLngInput":false},"results":[{"providedLocation":{"location":"denver,
+        co"},"locations":[{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"Denver","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A5XAX","geocodeQuality":"CITY","dragPoint":false,"sideOfStreet":"N","linkId":"282041090","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=1753833018"},{"street":"","adminArea6":"","adminArea6Type":"Neighborhood","adminArea5":"","adminArea5Type":"City","adminArea4":"Denver
+        County","adminArea4Type":"County","adminArea3":"CO","adminArea3Type":"State","adminArea1":"US","adminArea1Type":"Country","postalCode":"","geocodeQualityCode":"A4XAX","geocodeQuality":"COUNTY","dragPoint":false,"sideOfStreet":"N","linkId":"282932003","unknownInput":"","type":"s","latLng":{"lat":39.738453,"lng":-104.984853},"displayLatLng":{"lat":39.738453,"lng":-104.984853},"mapUrl":"http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=1287733786"}]}]}'
+  recorded_at: Wed, 11 Nov 2020 02:02:02 GMT
+- request:
+    method: get
+    uri: https://api.openweathermap.org/data/2.5/onecall?appid=4cd7d24cd5a2b1296d9032e5cfa6c18b&lat=39.738453&lon=-104.984853&units=imperial
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 11 Nov 2020 02:02:03 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '17587'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/data/2.5/onecall?lat=39.74&lon=-104.98&units=imperial"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: UTF-8
+      string: '{"lat":39.74,"lon":-104.98,"timezone":"America/Denver","timezone_offset":-25200,"current":{"dt":1605060123,"sunrise":1605015570,"sunset":1605052105,"temp":36.41,"feels_like":26.19,"pressure":1011,"humidity":64,"dew_point":26.17,"uvi":2.47,"clouds":75,"visibility":10000,"wind_speed":10.29,"wind_deg":30,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}]},"minutely":[{"dt":1605060180,"precipitation":0},{"dt":1605060240,"precipitation":0},{"dt":1605060300,"precipitation":0},{"dt":1605060360,"precipitation":0},{"dt":1605060420,"precipitation":0},{"dt":1605060480,"precipitation":0},{"dt":1605060540,"precipitation":0},{"dt":1605060600,"precipitation":0},{"dt":1605060660,"precipitation":0},{"dt":1605060720,"precipitation":0},{"dt":1605060780,"precipitation":0},{"dt":1605060840,"precipitation":0},{"dt":1605060900,"precipitation":0},{"dt":1605060960,"precipitation":0},{"dt":1605061020,"precipitation":0},{"dt":1605061080,"precipitation":0},{"dt":1605061140,"precipitation":0},{"dt":1605061200,"precipitation":0},{"dt":1605061260,"precipitation":0},{"dt":1605061320,"precipitation":0},{"dt":1605061380,"precipitation":0},{"dt":1605061440,"precipitation":0},{"dt":1605061500,"precipitation":0},{"dt":1605061560,"precipitation":0},{"dt":1605061620,"precipitation":0},{"dt":1605061680,"precipitation":0},{"dt":1605061740,"precipitation":0},{"dt":1605061800,"precipitation":0},{"dt":1605061860,"precipitation":0},{"dt":1605061920,"precipitation":0},{"dt":1605061980,"precipitation":0},{"dt":1605062040,"precipitation":0},{"dt":1605062100,"precipitation":0},{"dt":1605062160,"precipitation":0},{"dt":1605062220,"precipitation":0},{"dt":1605062280,"precipitation":0},{"dt":1605062340,"precipitation":0},{"dt":1605062400,"precipitation":0},{"dt":1605062460,"precipitation":0},{"dt":1605062520,"precipitation":0},{"dt":1605062580,"precipitation":0},{"dt":1605062640,"precipitation":0},{"dt":1605062700,"precipitation":0},{"dt":1605062760,"precipitation":0},{"dt":1605062820,"precipitation":0},{"dt":1605062880,"precipitation":0},{"dt":1605062940,"precipitation":0},{"dt":1605063000,"precipitation":0},{"dt":1605063060,"precipitation":0},{"dt":1605063120,"precipitation":0},{"dt":1605063180,"precipitation":0},{"dt":1605063240,"precipitation":0},{"dt":1605063300,"precipitation":0},{"dt":1605063360,"precipitation":0},{"dt":1605063420,"precipitation":0},{"dt":1605063480,"precipitation":0},{"dt":1605063540,"precipitation":0},{"dt":1605063600,"precipitation":0},{"dt":1605063660,"precipitation":0},{"dt":1605063720,"precipitation":0},{"dt":1605063780,"precipitation":0}],"hourly":[{"dt":1605060000,"temp":36.41,"feels_like":31.19,"pressure":1011,"humidity":64,"dew_point":26.17,"clouds":75,"visibility":10000,"wind_speed":1.39,"wind_deg":289,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1605063600,"temp":38.98,"feels_like":31.24,"pressure":1014,"humidity":58,"dew_point":26.24,"clouds":87,"visibility":10000,"wind_speed":5.88,"wind_deg":254,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1605067200,"temp":39.65,"feels_like":32.65,"pressure":1016,"humidity":56,"dew_point":26.04,"clouds":89,"visibility":10000,"wind_speed":4.54,"wind_deg":230,"weather":[{"id":804,"main":"Clouds","description":"overcast
+        clouds","icon":"04n"}],"pop":0},{"dt":1605070800,"temp":39.18,"feels_like":33.13,"pressure":1018,"humidity":58,"dew_point":26.4,"clouds":74,"visibility":10000,"wind_speed":2.93,"wind_deg":259,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1605074400,"temp":38.66,"feels_like":32.7,"pressure":1020,"humidity":59,"dew_point":26.33,"clouds":62,"visibility":10000,"wind_speed":2.75,"wind_deg":287,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0},{"dt":1605078000,"temp":37.87,"feels_like":31.73,"pressure":1020,"humidity":61,"dew_point":9.81,"clouds":0,"visibility":10000,"wind_speed":3.06,"wind_deg":249,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605081600,"temp":37.11,"feels_like":31.57,"pressure":1020,"humidity":63,"dew_point":10.09,"clouds":0,"visibility":10000,"wind_speed":2.04,"wind_deg":231,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605085200,"temp":36.61,"feels_like":31.71,"pressure":1020,"humidity":64,"dew_point":10.09,"clouds":0,"visibility":10000,"wind_speed":0.85,"wind_deg":230,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605088800,"temp":35.85,"feels_like":30.79,"pressure":1020,"humidity":66,"dew_point":9.95,"clouds":0,"visibility":10000,"wind_speed":1.16,"wind_deg":138,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605092400,"temp":34.99,"feels_like":29.52,"pressure":1020,"humidity":68,"dew_point":9.75,"clouds":0,"visibility":10000,"wind_speed":1.86,"wind_deg":98,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605096000,"temp":34.16,"feels_like":28.24,"pressure":1021,"humidity":70,"dew_point":9.52,"clouds":0,"visibility":10000,"wind_speed":2.64,"wind_deg":111,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605099600,"temp":33.71,"feels_like":27.95,"pressure":1021,"humidity":71,"dew_point":9.01,"clouds":0,"visibility":10000,"wind_speed":2.35,"wind_deg":134,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605103200,"temp":33.53,"feels_like":28.13,"pressure":1022,"humidity":71,"dew_point":8.38,"clouds":0,"visibility":10000,"wind_speed":1.68,"wind_deg":136,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605106800,"temp":35.28,"feels_like":30.47,"pressure":1021,"humidity":66,"dew_point":8.15,"clouds":0,"visibility":10000,"wind_speed":0.6,"wind_deg":179,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605110400,"temp":37.76,"feels_like":32.67,"pressure":1018,"humidity":60,"dew_point":8.11,"clouds":0,"visibility":10000,"wind_speed":1.12,"wind_deg":215,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605114000,"temp":40.32,"feels_like":34.39,"pressure":1016,"humidity":53,"dew_point":7.36,"clouds":0,"visibility":10000,"wind_speed":2.48,"wind_deg":165,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605117600,"temp":43.12,"feels_like":36.75,"pressure":1014,"humidity":46,"dew_point":4.62,"clouds":0,"visibility":10000,"wind_speed":3.13,"wind_deg":116,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605121200,"temp":45.91,"feels_like":39.07,"pressure":1012,"humidity":39,"dew_point":1.44,"clouds":0,"visibility":10000,"wind_speed":3.69,"wind_deg":84,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605124800,"temp":48.2,"feels_like":40.77,"pressure":1010,"humidity":35,"dew_point":-0.42,"clouds":0,"visibility":10000,"wind_speed":4.65,"wind_deg":45,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605128400,"temp":49.44,"feels_like":40.87,"pressure":1010,"humidity":33,"dew_point":-0.89,"clouds":0,"visibility":10000,"wind_speed":6.6,"wind_deg":44,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605132000,"temp":49.19,"feels_like":40.51,"pressure":1010,"humidity":34,"dew_point":0.43,"clouds":0,"visibility":10000,"wind_speed":6.89,"wind_deg":54,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605135600,"temp":47.68,"feels_like":38.89,"pressure":1011,"humidity":37,"dew_point":2.01,"clouds":0,"visibility":10000,"wind_speed":7.2,"wind_deg":77,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605139200,"temp":45.39,"feels_like":37.99,"pressure":1013,"humidity":41,"dew_point":3.22,"clouds":0,"visibility":10000,"wind_speed":4.81,"wind_deg":71,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605142800,"temp":43.88,"feels_like":37.35,"pressure":1014,"humidity":44,"dew_point":3.43,"clouds":0,"visibility":10000,"wind_speed":3.33,"wind_deg":64,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605146400,"temp":42.57,"feels_like":36.91,"pressure":1016,"humidity":46,"dew_point":3.51,"clouds":0,"visibility":10000,"wind_speed":1.74,"wind_deg":85,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605150000,"temp":41.58,"feels_like":35.55,"pressure":1016,"humidity":48,"dew_point":3.69,"clouds":0,"visibility":10000,"wind_speed":2.44,"wind_deg":111,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605153600,"temp":40.48,"feels_like":34.11,"pressure":1017,"humidity":51,"dew_point":4.51,"clouds":0,"visibility":10000,"wind_speed":3.13,"wind_deg":155,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605157200,"temp":39.6,"feels_like":32.9,"pressure":1018,"humidity":53,"dew_point":5.23,"clouds":0,"visibility":10000,"wind_speed":3.71,"wind_deg":171,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605160800,"temp":38.71,"feels_like":32.36,"pressure":1018,"humidity":55,"dew_point":5.31,"clouds":0,"visibility":10000,"wind_speed":3.13,"wind_deg":162,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605164400,"temp":37.38,"feels_like":30.09,"pressure":1018,"humidity":58,"dew_point":5.09,"clouds":6,"visibility":10000,"wind_speed":4.79,"wind_deg":115,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605168000,"temp":35.92,"feels_like":28.02,"pressure":1018,"humidity":62,"dew_point":5.31,"clouds":2,"visibility":10000,"wind_speed":5.91,"wind_deg":124,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605171600,"temp":35.56,"feels_like":28.8,"pressure":1019,"humidity":63,"dew_point":5.61,"clouds":2,"visibility":10000,"wind_speed":3.91,"wind_deg":124,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605175200,"temp":35.2,"feels_like":28.78,"pressure":1020,"humidity":64,"dew_point":5.92,"clouds":1,"visibility":10000,"wind_speed":3.31,"wind_deg":110,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605178800,"temp":35.06,"feels_like":30.13,"pressure":1020,"humidity":65,"dew_point":6.3,"clouds":1,"visibility":10000,"wind_speed":0.69,"wind_deg":42,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605182400,"temp":34.23,"feels_like":27.75,"pressure":1021,"humidity":68,"dew_point":7.29,"clouds":1,"visibility":10000,"wind_speed":3.51,"wind_deg":10,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605186000,"temp":33.19,"feels_like":26.33,"pressure":1022,"humidity":72,"dew_point":8.55,"clouds":0,"visibility":10000,"wind_speed":4.25,"wind_deg":26,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01n"}],"pop":0},{"dt":1605189600,"temp":31.96,"feels_like":24.44,"pressure":1023,"humidity":76,"dew_point":9.34,"clouds":0,"visibility":10000,"wind_speed":5.46,"wind_deg":53,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605193200,"temp":33.78,"feels_like":26.82,"pressure":1023,"humidity":72,"dew_point":9.97,"clouds":0,"visibility":10000,"wind_speed":4.56,"wind_deg":77,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605196800,"temp":36.81,"feels_like":29.32,"pressure":1021,"humidity":63,"dew_point":9.43,"clouds":0,"visibility":10000,"wind_speed":5.44,"wind_deg":61,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605200400,"temp":39.34,"feels_like":31.87,"pressure":1020,"humidity":56,"dew_point":7.65,"clouds":0,"visibility":10000,"wind_speed":5.3,"wind_deg":90,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605204000,"temp":41.59,"feels_like":32.7,"pressure":1020,"humidity":51,"dew_point":7.29,"clouds":0,"visibility":10000,"wind_speed":7.78,"wind_deg":123,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605207600,"temp":43.41,"feels_like":34.32,"pressure":1018,"humidity":47,"dew_point":7.21,"clouds":0,"visibility":10000,"wind_speed":8.1,"wind_deg":120,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605211200,"temp":44.47,"feels_like":34.59,"pressure":1017,"humidity":46,"dew_point":8.22,"clouds":0,"visibility":10000,"wind_speed":9.6,"wind_deg":133,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605214800,"temp":45.61,"feels_like":35.47,"pressure":1016,"humidity":45,"dew_point":10.27,"clouds":0,"visibility":10000,"wind_speed":10.16,"wind_deg":137,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605218400,"temp":46.51,"feels_like":36.93,"pressure":1016,"humidity":44,"dew_point":10.71,"clouds":0,"visibility":10000,"wind_speed":9.22,"wind_deg":124,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605222000,"temp":46.17,"feels_like":35.78,"pressure":1017,"humidity":44,"dew_point":10.26,"clouds":3,"visibility":10000,"wind_speed":10.58,"wind_deg":133,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"pop":0},{"dt":1605225600,"temp":42.13,"feels_like":31.19,"pressure":1019,"humidity":53,"dew_point":11.59,"clouds":13,"visibility":10000,"wind_speed":11.74,"wind_deg":147,"weather":[{"id":801,"main":"Clouds","description":"few
+        clouds","icon":"02n"}],"pop":0},{"dt":1605229200,"temp":41.02,"feels_like":31.21,"pressure":1021,"humidity":55,"dew_point":11.5,"clouds":58,"visibility":10000,"wind_speed":9.69,"wind_deg":152,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04n"}],"pop":0}],"daily":[{"dt":1605031200,"sunrise":1605015570,"sunset":1605052105,"temp":{"day":43.29,"min":33.13,"max":47.48,"night":38.19,"eve":36.41,"morn":33.13},"feels_like":{"day":35.65,"night":32.23,"eve":30.36,"morn":25.68},"pressure":1012,"humidity":47,"dew_point":6.37,"wind_speed":5.48,"wind_deg":131,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.47},{"dt":1605117600,"sunrise":1605102040,"sunset":1605138452,"temp":{"day":43.12,"min":34.18,"max":49.44,"night":38.71,"eve":45.39,"morn":34.18},"feels_like":{"day":36.75,"night":32.36,"eve":37.99,"morn":28.26},"pressure":1014,"humidity":46,"dew_point":4.62,"wind_speed":3.13,"wind_deg":116,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.53},{"dt":1605204000,"sunrise":1605188509,"sunset":1605224799,"temp":{"day":41.59,"min":33.78,"max":45.61,"night":38.48,"eve":42.13,"morn":34.23},"feels_like":{"day":32.7,"night":31.26,"eve":31.19,"morn":27.75},"pressure":1020,"humidity":51,"dew_point":7.29,"wind_speed":7.78,"wind_deg":123,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.37},{"dt":1605290400,"sunrise":1605274979,"sunset":1605311149,"temp":{"day":49.42,"min":36.77,"max":54.88,"night":43.54,"eve":50.13,"morn":36.77},"feels_like":{"day":44.22,"night":37.18,"eve":44.67,"morn":29.37},"pressure":1010,"humidity":38,"dew_point":7.63,"wind_speed":1.28,"wind_deg":48,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.49},{"dt":1605376800,"sunrise":1605361448,"sunset":1605397500,"temp":{"day":57.07,"min":39.63,"max":63.55,"night":48.88,"eve":56.21,"morn":39.63},"feels_like":{"day":50.45,"night":43.75,"eve":49.53,"morn":31.98},"pressure":1008,"humidity":33,"dew_point":19.06,"wind_speed":4.52,"wind_deg":222,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"clouds":82,"pop":0.04,"uvi":2.48},{"dt":1605463200,"sunrise":1605447917,"sunset":1605483853,"temp":{"day":49.3,"min":37.62,"max":53.76,"night":37.62,"eve":49.19,"morn":42.37},"feels_like":{"day":41.85,"night":27.84,"eve":42.44,"morn":37.98},"pressure":1020,"humidity":47,"dew_point":23.85,"wind_speed":6.35,"wind_deg":15,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":1,"pop":0.07,"uvi":2.56},{"dt":1605549600,"sunrise":1605534385,"sunset":1605570208,"temp":{"day":45.9,"min":35.89,"max":52.92,"night":47.53,"eve":49.05,"morn":35.89},"feels_like":{"day":40.17,"night":39.49,"eve":43.66,"morn":31.12},"pressure":1027,"humidity":42,"dew_point":5.45,"wind_speed":2.04,"wind_deg":165,"weather":[{"id":800,"main":"Clear","description":"clear
+        sky","icon":"01d"}],"clouds":0,"pop":0,"uvi":2.58},{"dt":1605636000,"sunrise":1605620854,"sunset":1605656565,"temp":{"day":58.77,"min":45.66,"max":64.76,"night":51.4,"eve":58.89,"morn":45.66},"feels_like":{"day":53.51,"night":44.71,"eve":53.53,"morn":38.41},"pressure":1021,"humidity":28,"dew_point":10.36,"wind_speed":1.54,"wind_deg":124,"weather":[{"id":803,"main":"Clouds","description":"broken
+        clouds","icon":"04d"}],"clouds":67,"pop":0,"uvi":2.55}]}'
+  recorded_at: Wed, 11 Nov 2020 02:02:03 GMT
+- request:
+    method: get
+    uri: https://api.bing.microsoft.com/v7.0/images/search?color=colorOnly&count=1&imageType=photo&q=evening%20broken%20clouds%20denver,%20co
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Ocp-Apim-Subscription-Key:
+      - 57e0df1476fb4807a3fc4d929f24dde3
+      User-Agent:
+      - Faraday v1.1.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache, no-store, must-revalidate
+      Pragma:
+      - no-cache
+      Content-Length:
+      - '18325'
+      Content-Type:
+      - application/json; charset=utf-8
+      Expires:
+      - "-1"
+      P3p:
+      - CP="NON UNI COM NAV STA LOC CURa DEVa PSAa PSDa OUR IND"
+      Bingapis-Traceid:
+      - 7E64265ABA4A463F8BEC483D2577BED1
+      X-Msedge-Clientid:
+      - 3F318BFA09E9671F0BE18485084266B3
+      X-Msapi-Userstate:
+      - 83a9
+      X-Search-Responseinfo:
+      - InternalResponseTime=161,MSDatacenter=DUB02
+      X-Msedge-Ref:
+      - 'Ref A: 7E64265ABA4A463F8BEC483D2577BED1 Ref B: DB3EDGE0812 Ref C: 2020-11-11T02:02:03Z'
+      Apim-Request-Id:
+      - 537c3cad-093b-4487-bc02-10ef82b69df1
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      Csp-Billing-Usage:
+      - CognitiveServices.BingSearchV7.Transaction=1
+      Date:
+      - Wed, 11 Nov 2020 02:02:03 GMT
+    body:
+      encoding: UTF-8
+      string: '{"_type": "Images", "instrumentation": {"_type": "ResponseInstrumentation"},
+        "readLink": "images\/search?q=evening broken clouds denver, co", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=evening broken clouds denver, co&FORM=OIIARP",
+        "queryContext": {"originalQuery": "evening broken clouds denver, co", "alterationDisplayQuery":
+        "evening broken clouds denver, co", "alterationOverrideQuery": "+evening broken
+        clouds denver, co", "alterationMethod": "AM_JustChangeIt", "alterationType":
+        "CombinedAlterationsChained"}, "totalEstimatedMatches": 100, "nextOffset":
+        1, "currentOffset": 0, "value": [{"webSearchUrl": "https:\/\/www.bing.com\/images\/search?view=detailv2&FORM=OIIRPO&q=evening+broken+clouds+denver%2c+co&id=C6BA625B8C4C4495378980472773465353527B14&simid=607995295902992532",
+        "name": "really loved the sunsets every evening we were in Denver ...", "thumbnailUrl":
+        "https:\/\/tse2.mm.bing.net\/th?id=OIP.Jc3ec56f-n58dz6LKt8vuQHaFj&pid=Api",
+        "datePublished": "2020-04-02T19:22:00.0000000Z", "isFamilyFriendly": true,
+        "contentUrl": "https:\/\/i.pinimg.com\/originals\/ef\/1b\/f6\/ef1bf68b81f4dcc129dce5e105f82ccb.jpg",
+        "hostPageUrl": "https:\/\/www.pinterest.com\/pin\/480477853973838871\/", "contentSize":
+        "1561789 B", "encodingFormat": "jpeg", "hostPageDisplayUrl": "https:\/\/www.pinterest.com\/pin\/480477853973838871",
+        "width": 4608, "height": 3456, "thumbnail": {"width": 474, "height": 355},
+        "imageInsightsToken": "ccid_Jc3ec56f*cp_0388F0AF22387A4BC736BB9257566107*mid_C6BA625B8C4C4495378980472773465353527B14*simid_607995295902992532*thid_OIP.Jc3ec56f-n58dz6LKt8vuQHaFj",
+        "insightsMetadata": {"pagesIncludingCount": 1, "availableSizesCount": 1},
+        "imageId": "C6BA625B8C4C4495378980472773465353527B14", "accentColor": "C25109"}],
+        "pivotSuggestions": [{"pivot": "evening", "suggestions": []}, {"pivot": "broken",
+        "suggestions": []}, {"pivot": "clouds", "suggestions": []}, {"pivot": "denver,",
+        "suggestions": []}, {"pivot": "co", "suggestions": []}], "relatedSearches":
+        [{"text": "Brown Clouds", "displayText": "Brown Clouds", "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Brown+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Brown+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Brown+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Smog", "displayText": "Denver Smog", "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Denver+Smog&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Smog",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Denver+Smog&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Mammatus Clouds", "displayText": "Mammatus Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Mammatus+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Mammatus+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Mammatus+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Indoor Clouds", "displayText": "Indoor Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Indoor+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Indoor+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Indoor+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Shelf Cloud Tornado", "displayText": "Shelf Cloud Tornado", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Shelf+Cloud+Tornado&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Shelf+Cloud+Tornado",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Shelf+Cloud+Tornado&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Cloud Logo", "displayText": "Cloud Logo", "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Cloud+Logo&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Cloud+Logo",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Cloud+Logo&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Dark Storm Clouds", "displayText": "Dark Storm Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Dark+Storm+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Dark+Storm+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Dark+Storm+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Colorado Skyline", "displayText": "Denver Colorado Skyline",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Denver+Colorado+Skyline&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Colorado+Skyline",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Denver+Colorado+Skyline&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Brown Cloud Over Denver", "displayText": "Brown Cloud Over Denver",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Brown+Cloud+Over+Denver&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Brown+Cloud+Over+Denver",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Brown+Cloud+Over+Denver&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Rotating Wall Cloud", "displayText": "Rotating Wall Cloud", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Rotating+Wall+Cloud&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Rotating+Wall+Cloud",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Rotating+Wall+Cloud&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Above Clouds", "displayText": "Above Clouds", "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Above+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Above+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Above+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Iridescent Clouds", "displayText": "Iridescent Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Iridescent+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Iridescent+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Iridescent+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Skyline Mountains", "displayText": "Denver Skyline Mountains",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Denver+Skyline+Mountains&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Skyline+Mountains",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Denver+Skyline+Mountains&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Pollution", "displayText": "Denver Pollution", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Denver+Pollution&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Pollution",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Denver+Pollution&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Mountain Wave Clouds", "displayText": "Mountain Wave Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Mountain+Wave+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Mountain+Wave+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Mountain+Wave+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Types of Storm Clouds", "displayText": "Types of Storm Clouds",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Types+of+Storm+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Types+of+Storm+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Types+of+Storm+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Sunrise Clouds", "displayText": "Sunrise Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Sunrise+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Sunrise+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Sunrise+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Sunset Clouds", "displayText": "Sunset Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Sunset+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Sunset+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Sunset+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Tornado Funnel Cloud", "displayText": "Tornado Funnel Cloud", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Tornado+Funnel+Cloud&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Tornado+Funnel+Cloud",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Tornado+Funnel+Cloud&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Cumulus Clouds", "displayText": "Cumulus Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Cumulus+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Cumulus+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Cumulus+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Storm Clouds Over Field", "displayText": "Storm Clouds Over Field",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Storm+Clouds+Over+Field&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Storm+Clouds+Over+Field",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Storm+Clouds+Over+Field&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Panoramic Clouds", "displayText": "Panoramic Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Panoramic+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Panoramic+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Panoramic+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Sky Clouds", "displayText": "Sky Clouds", "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Sky+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Sky+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Sky+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Rainbow Clouds", "displayText": "Rainbow Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Rainbow+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Rainbow+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Rainbow+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Black Tornado Clouds", "displayText": "Black Tornado Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Black+Tornado+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Black+Tornado+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Black+Tornado+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Demonic Storm Cloud in Denver", "displayText": "Demonic Storm Cloud
+        in Denver", "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Demonic+Storm+Cloud+in+Denver&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Demonic+Storm+Cloud+in+Denver",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Demonic+Storm+Cloud+in+Denver&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Amazing Angel Cloud Formation", "displayText": "Amazing Angel Cloud
+        Formation", "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Amazing+Angel+Cloud+Formation&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Amazing+Angel+Cloud+Formation",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Amazing+Angel+Cloud+Formation&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Large Black Storm Clouds", "displayText": "Large Black Storm Clouds",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Large+Black+Storm+Clouds&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Large+Black+Storm+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Large+Black+Storm+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Funny Cloud Formations", "displayText": "Funny Cloud Formations",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Funny+Cloud+Formations&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Funny+Cloud+Formations",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Funny+Cloud+Formations&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Air Pollution", "displayText": "Denver Air Pollution", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Denver+Air+Pollution&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Air+Pollution",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse1.mm.bing.net\/th?q=Denver+Air+Pollution&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Clean Air Clouds", "displayText": "Clean Air Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Clean+Air+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Clean+Air+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Clean+Air+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Weird Cloud in Denver", "displayText": "Weird Cloud in Denver",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Weird+Cloud+in+Denver&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Weird+Cloud+in+Denver",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Weird+Cloud+in+Denver&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Wall Cloud Thunderstorm", "displayText": "Wall Cloud Thunderstorm",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Wall+Cloud+Thunderstorm&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Wall+Cloud+Thunderstorm",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Wall+Cloud+Thunderstorm&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Sky Clouds Art", "displayText": "Sky Clouds Art", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Sky+Clouds+Art&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Sky+Clouds+Art",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Sky+Clouds+Art&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Broncos Logo", "displayText": "Denver Broncos Logo", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Denver+Broncos+Logo&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Broncos+Logo",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Denver+Broncos+Logo&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Airport Sculpture", "displayText": "Denver Airport Sculpture",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Denver+Airport+Sculpture&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Airport+Sculpture",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Denver+Airport+Sculpture&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Wall Cloud Rotation", "displayText": "Wall Cloud Rotation", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Wall+Cloud+Rotation&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Wall+Cloud+Rotation",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Wall+Cloud+Rotation&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Rain Clouds Colorado", "displayText": "Rain Clouds Colorado", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Rain+Clouds+Colorado&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Rain+Clouds+Colorado",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Rain+Clouds+Colorado&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Cloud Panorama", "displayText": "Cloud Panorama", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Cloud+Panorama&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Cloud+Panorama",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse3.mm.bing.net\/th?q=Cloud+Panorama&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Evil Cloud", "displayText": "Denver Evil Cloud", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Denver+Evil+Cloud&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Evil+Cloud",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse4.mm.bing.net\/th?q=Denver+Evil+Cloud&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Dramatic Clouds", "displayText": "Dramatic Clouds", "webSearchUrl":
+        "https:\/\/www.bing.com\/images\/search?q=Dramatic+Clouds&FORM=IRPATC", "searchLink":
+        "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Dramatic+Clouds",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Dramatic+Clouds&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Goulish Storm Cloud Denver", "displayText": "Goulish Storm Cloud
+        Denver", "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Goulish+Storm+Cloud+Denver&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Goulish+Storm+Cloud+Denver",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Goulish+Storm+Cloud+Denver&pid=Api&mkt=en-GB&adlt=moderate&t=1"}},
+        {"text": "Denver Airport Statue", "displayText": "Denver Airport Statue",
+        "webSearchUrl": "https:\/\/www.bing.com\/images\/search?q=Denver+Airport+Statue&FORM=IRPATC",
+        "searchLink": "https:\/\/api.bing.microsoft.com\/api\/v7\/images\/search?q=Denver+Airport+Statue",
+        "thumbnail": {"thumbnailUrl": "https:\/\/tse2.mm.bing.net\/th?q=Denver+Airport+Statue&pid=Api&mkt=en-GB&adlt=moderate&t=1"}}]}'
+  recorded_at: Wed, 11 Nov 2020 02:02:04 GMT
+recorded_with: VCR 6.0.0

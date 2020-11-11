@@ -1,7 +1,7 @@
 class BackgroundImageService
-  def self.get_image_by_location(location)
+  def self.get_image_by_location(query)
     response = conn.get("/v7.0/images/search") do |r|
-      r.params['q'] = location
+      r.params['q'] = query
       r.params['count'] = 1
       r.params['color'] = 'colorOnly'
       r.params['imageType'] = 'photo'

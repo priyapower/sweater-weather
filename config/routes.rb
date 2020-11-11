@@ -5,7 +5,6 @@ Rails.application.routes.draw do
       resources :sessions, only: :create
       resources :road_trip, only: :create
       resources :forecast, only: :index
-      resources :trails, only: :index
       resources :backgrounds, only: :index
     end
   end

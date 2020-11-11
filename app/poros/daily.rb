@@ -11,8 +11,8 @@ class Daily
     @date = Time.at(attributes[:dt]).strftime("%Y-%m-%d")
     @sunrise = Time.at(attributes[:sunrise])
     @sunset = Time.at(attributes[:sunset])
-    @max_temp = "#{attributes[:temp][:max]}" + " F"
-    @min_temp = "#{attributes[:temp][:min]}" + " F"
+    @max_temp = attributes[:temp][:max]
+    @min_temp = attributes[:temp][:min]
     @conditions = attributes[:weather][0][:description]
     @icon = attributes[:weather][0][:icon]
   end

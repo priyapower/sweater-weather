@@ -1,72 +1,16 @@
 require "rails_helper"
 
-RSpec.describe ForecastService do
-  it "calls external api OpenWeather for details", :vcr do
-    map_json =  {:info=>
-      {:statuscode=>0,
-        :copyright=>
-        {:text=>"© 2020 MapQuest, Inc.",
-          :imageUrl=>"http://api.mqcdn.com/res/mqlogo.gif",
-          :imageAltText=>"© 2020 MapQuest, Inc."},
-          :messages=>[]},
-          :options=>{:maxResults=>-1, :thumbMaps=>true, :ignoreLatLngInput=>false},
-          :results=>
-          [{:providedLocation=>{:location=>"denver, co"},
-            :locations=>
-            [{:street=>"",
-              :adminArea6=>"",
-              :adminArea6Type=>"Neighborhood",
-              :adminArea5=>"Denver",
-              :adminArea5Type=>"City",
-              :adminArea4=>"Denver County",
-              :adminArea4Type=>"County",
-              :adminArea3=>"CO",
-              :adminArea3Type=>"State",
-              :adminArea1=>"US",
-              :adminArea1Type=>"Country",
-              :postalCode=>"",
-              :geocodeQualityCode=>"A5XAX",
-              :geocodeQuality=>"CITY",
-              :dragPoint=>false,
-              :sideOfStreet=>"N",
-              :linkId=>"282041090",
-              :unknownInput=>"",
-              :type=>"s",
-              :latLng=>{:lat=>39.738453, :lng=>-104.984853},
-              :displayLatLng=>{:lat=>39.738453, :lng=>-104.984853},
-              :mapUrl=>
-              "http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-1&scalebar=true&zoom=12&rand=766206759"},
-              {:street=>"",
-                :adminArea6=>"",
-                :adminArea6Type=>"Neighborhood",
-                :adminArea5=>"",
-                :adminArea5Type=>"City",
-                :adminArea4=>"Denver County",
-                :adminArea4Type=>"County",
-                :adminArea3=>"CO",
-                :adminArea3Type=>"State",
-                :adminArea1=>"US",
-                :adminArea1Type=>"Country",
-                :postalCode=>"",
-                :geocodeQualityCode=>"A4XAX",
-                :geocodeQuality=>"COUNTY",
-                :dragPoint=>false,
-                :sideOfStreet=>"N",
-                :linkId=>"282932003",
-                :unknownInput=>"",
-                :type=>"s",
-                :latLng=>{:lat=>39.738453, :lng=>-104.984853},
-                :displayLatLng=>{:lat=>39.738453, :lng=>-104.984853},
-                :mapUrl=>
-                "http://www.mapquestapi.com/staticmap/v5/map?key=F4imcFajwgOoSfb5H1JvPxU44lY0JCtJ&type=map&size=225,160&locations=39.738453,-104.984853|marker-sm-50318A-2&scalebar=true&zoom=9&rand=-942833430"
-              }
-            ]
-          }
-        ]
-      }
-    map = Map.new(map_json)
+RSpec.describe ForecastService, :vcr do
+  it "calls external api OpenWeather for weather based on coordinates" do
+    location = 'denver, co'
+    map = MapFacade.get_coords_by_loc(location)
     json = ForecastService.forecast_by_coords(map)
     expect(json).to be_a(Hash)
+    expect(json).to have_key(:lat)
+    expect(json[:lat]).to eq(map.latitude.round(2))
+    expect(json).to have_key(:lon)
+    expect(json[:lon]).to eq(map.longitude.round(2))
+
     expect(json).to have_key(:current)
     expect(json[:current]).to be_a(Hash)
     expect(json[:current][:dt]).to be_an(Integer)
@@ -82,5 +26,34 @@ RSpec.describe ForecastService do
     expect(json[:current][:visibility]).to be_a(Numeric)
     expect(json[:current][:weather][0][:description]).to be_a(String)
     expect(json[:current][:weather][0][:icon]).to be_a(String)
+    expect(json[:current][:temp]).to eq(45.46)
+    expect(json[:current][:feels_like]).to eq(31.93)
+    expect(json[:current][:humidity]).to eq(24)
+    expect(json[:current][:uvi]).to eq(2.41)
+    expect(json[:current][:visibility]).to eq(10000)
+    expect(json[:current][:weather][0][:description]).to eq('few clouds')
+    expect(json[:current][:weather][0][:icon]).to eq('02d')
+
+    expect(json).to have_key(:daily)
+    expect(json[:daily]).to be_a(Array)
+    expect(json[:daily].first).to be_a(Hash)
+    expect(json[:daily].first).to have_key(:temp)
+    expect(json[:daily].first[:temp]).to be_a(Hash)
+    expect(json[:daily].first[:temp]).to have_key(:min)
+    expect(json[:daily].first[:temp][:min]).to be_a(Float)
+    expect(json[:daily].first[:temp][:min]).to eq(33.13)
+    expect(json[:daily].first[:temp]).to have_key(:max)
+    expect(json[:daily].first[:temp][:max]).to be_an(Float)
+    expect(json[:daily].first[:temp][:max]).to eq(45.46)
+
+    expect(json).to have_key(:hourly)
+    expect(json[:hourly]).to be_a(Array)
+    expect(json[:hourly].first).to be_a(Hash)
+    expect(json[:hourly].first).to have_key(:wind_speed)
+    expect(json[:hourly].first[:wind_speed]).to be_a(Float)
+    expect(json[:hourly].first[:wind_speed]).to eq(3.69)
+    expect(json[:hourly].first).to have_key(:wind_deg)
+    expect(json[:hourly].first[:wind_deg]).to be_an(Integer)
+    expect(json[:hourly].first[:wind_deg]).to eq(50)
   end
 end

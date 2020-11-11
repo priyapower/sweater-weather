@@ -5,8 +5,7 @@ class Api::V1::UsersController < ApplicationController
     if new_user.save
       render json: UsersSerializer.new(new_user), status: 201
     else
-      render body: nil, status: 404
-      # render json: user.error_message(user_params), status: 401 # Needs a method in application controller/user model for error meesages
+      render body: generate_error(new_user), status: 400
     end
   end
 
