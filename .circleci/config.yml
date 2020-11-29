@@ -20,4 +20,4 @@ jobs:
           command: bundle -v
       - ruby/bundle-install
 
-bundle config set path 'vendor/bundle'
+# bundle config set path 'vendor/bundle'
