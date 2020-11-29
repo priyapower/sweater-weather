@@ -19,3 +19,5 @@ jobs:
           name: Which bundler?
           command: bundle -v
       - ruby/bundle-install
+
+bundle config set path 'vendor/bundle'
